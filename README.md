@@ -8,7 +8,7 @@ Current version is today's tip of HEAD:
 https://github.com/ompl/ompl/commit/c94d586f7f39dc9df9e174357932985b69a86788
 
 Example:
-```
+```cs
 var space = new Base.RealVectorStateSpace(3);
 var bounds = new Base.RealVectorBounds(3);
 bounds.setLow(0, -3);
