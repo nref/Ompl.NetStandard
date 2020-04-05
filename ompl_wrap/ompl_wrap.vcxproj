@@ -54,10 +54,6 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -70,7 +66,6 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>bin\$(Platform)\$(Configuration)\</OutDir>
@@ -111,6 +106,17 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+        echo rmdir /S /Q $(ProjectDir)generated
+        rmdir /S /Q $(ProjectDir)generated
+        mkdir generated
+        mkdir generated\Ompl
+        mkdir generated\Ompl\Base
+        mkdir generated\Ompl\Geometric
+        mkdir generated\Ompl\Control
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,6 +134,17 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+        echo rmdir /S /Q $(ProjectDir)generated
+        rmdir /S /Q $(ProjectDir)generated
+        mkdir generated
+        mkdir generated\Ompl
+        mkdir generated\Ompl\Base
+        mkdir generated\Ompl\Geometric
+        mkdir generated\Ompl\Control
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -145,6 +162,17 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+        echo rmdir /S /Q $(ProjectDir)generated
+        rmdir /S /Q $(ProjectDir)generated
+        mkdir generated
+        mkdir generated\Ompl
+        mkdir generated\Ompl\Base
+        mkdir generated\Ompl\Geometric
+        mkdir generated\Ompl\Control
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -166,44 +194,93 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+        echo rmdir /S /Q $(ProjectDir)generated
+        rmdir /S /Q $(ProjectDir)generated
+        mkdir generated
+        mkdir generated\Ompl
+        mkdir generated\Ompl\Base
+        mkdir generated\Ompl\Geometric
+        mkdir generated\Ompl\Control
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="ompl.i">
+    <!-- <CustomBuild Include="common.i">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-        echo del /Q $(ProjectDir)generated\*.cs
-        del /Q $(ProjectDir)generated\*.cs
-        echo swig -I../ompl/src -c++ -csharp %(Identity)
-        swig -I../ompl/src -c++ -csharp %(Identity)
-        md generated
-        move *.cs generated
+        echo swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
+        swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
       </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-        echo del /Q $(ProjectDir)generated\*.cs
-        del /Q $(ProjectDir)generated\*.cs
-        echo swig -I../ompl/src -c++ -csharp %(Identity)
-        swig -I../ompl/src -c++ -csharp %(Identity)
-        md generated
-        move *.cs generated
+        echo swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
+        swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
       </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_wrap.cxx</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_wrap.cxx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl.base_wrap.cxx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl.base_wrap.cxx</Outputs>
+    </CustomBuild> -->
+    <CustomBuild Include="ompl_base.i">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport  %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_base_wrap.cxx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_base_wrap.cxx</Outputs>
     </CustomBuild>
+    <CustomBuild Include="ompl_geometric.i">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_geometric_wrap.cxx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_geometric_wrap.cxx</Outputs>
+    </CustomBuild>
+    <!-- <CustomBuild Include="ompl_control.i">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Control -c++ -csharp -namespace Ompl.Control -dllimport ompl_wrap %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Control -c++ -csharp -namespace Ompl.Control -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Control -c++ -csharp -namespace Ompl.Control -dllimport ompl_wrap %(Identity)
+        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Control -c++ -csharp -namespace Ompl.Control -dllimport ompl_wrap %(Identity)
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_control_wrap.cxx</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_control_wrap.cxx</Outputs>
+    </CustomBuild> -->
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="ompl_base_wrap.h" />
+    <ClInclude Include="ompl_geometric_wrap.h" />
+    <!-- <ClInclude Include="ompl_control_wrap.h" /> -->
     <ClInclude Include="pch.h" />
-    <ClInclude Include="ompl_wrap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ompl_base_wrap.cxx" />
+    <ClCompile Include="ompl_geometric_wrap.cxx" />
+    <!-- <ClCompile Include="ompl_control_wrap.cxx" /> -->
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="ompl_wrap.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common.i" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

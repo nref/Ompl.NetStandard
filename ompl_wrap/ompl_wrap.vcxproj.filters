@@ -3,14 +3,51 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="ompl_wrap.cxx" />
+    <ClCompile Include="ompl_base_wrap.cxx">
+      <Filter>generated_cxx</Filter>
+    </ClCompile>
+    <ClCompile Include="ompl_geometric_wrap.cxx">
+      <Filter>generated_cxx</Filter>
+    </ClCompile>
+    <ClCompile Include="ompl_control_wrap.cxx">
+      <Filter>generated_cxx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="ompl_wrap.h" />
+    <ClInclude Include="ompl_geometric_wrap.h">
+      <Filter>generated_cxx</Filter>
+    </ClInclude>
+    <ClInclude Include="ompl_base_wrap.h">
+      <Filter>generated_cxx</Filter>
+    </ClInclude>
+    <ClInclude Include="ompl_control_wrap.h">
+      <Filter>generated_cxx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ompl.i" />
+    <CustomBuild Include="ompl_geometric.i">
+      <Filter>swig</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ompl_base.i">
+      <Filter>swig</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ompl_control.i">
+      <Filter>swig</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generated_cxx">
+      <UniqueIdentifier>{acf405bd-97d4-4464-a09f-bff87a0bd6d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="swig">
+      <UniqueIdentifier>{fd74a837-3b67-4d9e-8b8e-492c6df05dbc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common.i">
+      <Filter>swig</Filter>
+    </None>
   </ItemGroup>
 </Project>
