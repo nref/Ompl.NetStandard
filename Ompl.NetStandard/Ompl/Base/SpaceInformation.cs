@@ -94,8 +94,8 @@ public class SpaceInformation : global::System.IDisposable {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setStateValidityChecker(SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t svc) {
-    ompl_basePINVOKE.SpaceInformation_setStateValidityChecker__SWIG_0(swigCPtr, SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t.getCPtr(svc));
+  public void setStateValidityChecker(StateValidityChecker svc) {
+    ompl_basePINVOKE.SpaceInformation_setStateValidityChecker__SWIG_0(swigCPtr, StateValidityChecker.getCPtr(svc));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -104,19 +104,21 @@ public class SpaceInformation : global::System.IDisposable {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t getStateValidityChecker() {
-    SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t(ompl_basePINVOKE.SpaceInformation_getStateValidityChecker(swigCPtr), false);
+  public StateValidityChecker getStateValidityChecker() {
+    global::System.IntPtr cPtr = ompl_basePINVOKE.SpaceInformation_getStateValidityChecker(swigCPtr);
+    StateValidityChecker ret = (cPtr == global::System.IntPtr.Zero) ? null : new StateValidityChecker(cPtr, true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void setMotionValidator(SWIGTYPE_p_std__shared_ptrT_ompl__base__MotionValidator_t mv) {
-    ompl_basePINVOKE.SpaceInformation_setMotionValidator(swigCPtr, SWIGTYPE_p_std__shared_ptrT_ompl__base__MotionValidator_t.getCPtr(mv));
+  public void setMotionValidator(MotionValidator mv) {
+    ompl_basePINVOKE.SpaceInformation_setMotionValidator(swigCPtr, MotionValidator.getCPtr(mv));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ompl__base__MotionValidator_t getMotionValidator() {
-    SWIGTYPE_p_std__shared_ptrT_ompl__base__MotionValidator_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__MotionValidator_t(ompl_basePINVOKE.SpaceInformation_getMotionValidator__SWIG_0(swigCPtr), false);
+  public MotionValidator getMotionValidator() {
+    global::System.IntPtr cPtr = ompl_basePINVOKE.SpaceInformation_getMotionValidator__SWIG_0(swigCPtr);
+    MotionValidator ret = (cPtr == global::System.IntPtr.Zero) ? null : new MotionValidator(cPtr, true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -185,14 +187,15 @@ public class SpaceInformation : global::System.IDisposable {
     return ret;
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ompl__base__ValidStateSampler_t allocValidStateSampler() {
-    SWIGTYPE_p_std__shared_ptrT_ompl__base__ValidStateSampler_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__ValidStateSampler_t(ompl_basePINVOKE.SpaceInformation_allocValidStateSampler(swigCPtr), true);
+  public ValidStateSampler allocValidStateSampler() {
+    global::System.IntPtr cPtr = ompl_basePINVOKE.SpaceInformation_allocValidStateSampler(swigCPtr);
+    ValidStateSampler ret = (cPtr == global::System.IntPtr.Zero) ? null : new ValidStateSampler(cPtr, true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void setValidStateSamplerAllocator(SWIGTYPE_p_std__functionT_std__shared_ptrT_ompl__base__ValidStateSampler_t_fompl__base__SpaceInformation_const_pF_t vssa) {
-    ompl_basePINVOKE.SpaceInformation_setValidStateSamplerAllocator(swigCPtr, SWIGTYPE_p_std__functionT_std__shared_ptrT_ompl__base__ValidStateSampler_t_fompl__base__SpaceInformation_const_pF_t.getCPtr(vssa));
+  public void setValidStateSamplerAllocator(ValidStateSamplerAllocator vssa) {
+    ompl_basePINVOKE.SpaceInformation_setValidStateSamplerAllocator(swigCPtr, ValidStateSamplerAllocator.getCPtr(vssa));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -213,8 +216,8 @@ public class SpaceInformation : global::System.IDisposable {
     return ret;
   }
 
-  public bool searchValidNearby(SWIGTYPE_p_std__shared_ptrT_ompl__base__ValidStateSampler_t sampler, State state, State near, double distance) {
-    bool ret = ompl_basePINVOKE.SpaceInformation_searchValidNearby__SWIG_1(swigCPtr, SWIGTYPE_p_std__shared_ptrT_ompl__base__ValidStateSampler_t.getCPtr(sampler), State.getCPtr(state), State.getCPtr(near), distance);
+  public bool searchValidNearby(ValidStateSampler sampler, State state, State near, double distance) {
+    bool ret = ompl_basePINVOKE.SpaceInformation_searchValidNearby__SWIG_1(swigCPtr, ValidStateSampler.getCPtr(sampler), State.getCPtr(state), State.getCPtr(near), distance);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

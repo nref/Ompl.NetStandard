@@ -40,7 +40,7 @@ public class CompoundStateSpace : StateSpace {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CompoundStateSpace(SWIGTYPE_p_std__vectorT_std__shared_ptrT_ompl__base__StateSpace_t_t components, SWIGTYPE_p_std__vectorT_double_t weights) : this(ompl_basePINVOKE.new_CompoundStateSpace__SWIG_1(SWIGTYPE_p_std__vectorT_std__shared_ptrT_ompl__base__StateSpace_t_t.getCPtr(components), SWIGTYPE_p_std__vectorT_double_t.getCPtr(weights)), true) {
+  public CompoundStateSpace(SWIGTYPE_p_std__vectorT_std__shared_ptrT_ompl__base__StateSpace_t_t components, doubleVector weights) : this(ompl_basePINVOKE.new_CompoundStateSpace__SWIG_1(SWIGTYPE_p_std__vectorT_std__shared_ptrT_ompl__base__StateSpace_t_t.getCPtr(components), doubleVector.getCPtr(weights)), true) {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -121,8 +121,8 @@ public class CompoundStateSpace : StateSpace {
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t getSubspaceWeights() {
-    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(ompl_basePINVOKE.CompoundStateSpace_getSubspaceWeights(swigCPtr), false);
+  public doubleVector getSubspaceWeights() {
+    doubleVector ret = new doubleVector(ompl_basePINVOKE.CompoundStateSpace_getSubspaceWeights(swigCPtr), false);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

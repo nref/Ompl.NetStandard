@@ -79,8 +79,8 @@ public class RealVectorBounds : global::System.IDisposable {
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t getDifference() {
-    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(ompl_basePINVOKE.RealVectorBounds_getDifference(swigCPtr), true);
+  public doubleVector getDifference() {
+    doubleVector ret = new doubleVector(ompl_basePINVOKE.RealVectorBounds_getDifference(swigCPtr), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -90,27 +90,27 @@ public class RealVectorBounds : global::System.IDisposable {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t low {
+  public doubleVector low {
     set {
-      ompl_basePINVOKE.RealVectorBounds_low_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
+      ompl_basePINVOKE.RealVectorBounds_low_set(swigCPtr, doubleVector.getCPtr(value));
       if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = ompl_basePINVOKE.RealVectorBounds_low_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_double_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_double_t(cPtr, false);
+      doubleVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new doubleVector(cPtr, false);
       if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_double_t high {
+  public doubleVector high {
     set {
-      ompl_basePINVOKE.RealVectorBounds_high_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
+      ompl_basePINVOKE.RealVectorBounds_high_set(swigCPtr, doubleVector.getCPtr(value));
       if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = ompl_basePINVOKE.RealVectorBounds_high_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_double_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_double_t(cPtr, false);
+      doubleVector ret = (cPtr == global::System.IntPtr.Zero) ? null : new doubleVector(cPtr, false);
       if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

@@ -11,6 +11,44 @@
 namespace Ompl.Geometric {
 
 public class ompl_geometric {
+  public static SWIGTYPE_p_double new_doubleArray(int nelements) {
+    global::System.IntPtr cPtr = ompl_geometricPINVOKE.new_doubleArray(nelements);
+    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_doubleArray(SWIGTYPE_p_double ary) {
+    ompl_geometricPINVOKE.delete_doubleArray(SWIGTYPE_p_double.getCPtr(ary));
+  }
+
+  public static double doubleArray_getitem(SWIGTYPE_p_double ary, int index) {
+    double ret = ompl_geometricPINVOKE.doubleArray_getitem(SWIGTYPE_p_double.getCPtr(ary), index);
+    return ret;
+  }
+
+  public static void doubleArray_setitem(SWIGTYPE_p_double ary, int index, double value) {
+    ompl_geometricPINVOKE.doubleArray_setitem(SWIGTYPE_p_double.getCPtr(ary), index, value);
+  }
+
+  public static SWIGTYPE_p_int new_intArray(int nelements) {
+    global::System.IntPtr cPtr = ompl_geometricPINVOKE.new_intArray(nelements);
+    SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_intArray(SWIGTYPE_p_int ary) {
+    ompl_geometricPINVOKE.delete_intArray(SWIGTYPE_p_int.getCPtr(ary));
+  }
+
+  public static int intArray_getitem(SWIGTYPE_p_int ary, int index) {
+    int ret = ompl_geometricPINVOKE.intArray_getitem(SWIGTYPE_p_int.getCPtr(ary), index);
+    return ret;
+  }
+
+  public static void intArray_setitem(SWIGTYPE_p_int ary, int index, int value) {
+    ompl_geometricPINVOKE.intArray_setitem(SWIGTYPE_p_int.getCPtr(ary), index, value);
+  }
+
   public static SWIGTYPE_p_std__chrono__system_clock__time_point now() {
     SWIGTYPE_p_std__chrono__system_clock__time_point ret = new SWIGTYPE_p_std__chrono__system_clock__time_point(ompl_geometricPINVOKE.now(), true);
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();

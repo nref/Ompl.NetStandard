@@ -10,18 +10,18 @@
 
 namespace Ompl.Base {
 
-public class SWIGTYPE_p_std__vectorT_double_t {
+public class SWIGTYPE_p_int {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal SWIGTYPE_p_std__vectorT_double_t(global::System.IntPtr cPtr, bool futureUse) {
+  internal SWIGTYPE_p_int(global::System.IntPtr cPtr, bool futureUse) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  protected SWIGTYPE_p_std__vectorT_double_t() {
+  protected SWIGTYPE_p_int() {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__vectorT_double_t obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_int obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 }

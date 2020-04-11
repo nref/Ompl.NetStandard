@@ -382,6 +382,14 @@ namespace Swig {
 }
 
 
+  #include <functional>
+  #include <iostream>
+
+  #ifndef SWIG_DIRECTORS
+  #error "std_function.i: Directors must be enabled"
+  #endif
+
+
 
 #include "ompl/util/Time.h"
 #include "ompl/util/ProlateHyperspheroid.h"
@@ -398,6 +406,38 @@ namespace Swig {
 
 
 
+static double *new_doubleArray(int nelements) { 
+  return new double[nelements](); 
+}
+
+static void delete_doubleArray(double *ary) { 
+  delete [] ary; 
+}
+
+static double doubleArray_getitem(double *ary, int index) {
+    return ary[index];
+}
+static void doubleArray_setitem(double *ary, int index, double value) {
+    ary[index] = value;
+}
+
+
+static int *new_intArray(int nelements) { 
+  return new int[nelements](); 
+}
+
+static void delete_intArray(int *ary) { 
+  delete [] ary; 
+}
+
+static int intArray_getitem(int *ary, int index) {
+    return ary[index];
+}
+static void intArray_setitem(int *ary, int index, int value) {
+    ary[index] = value;
+}
+
+
 #include <string>
 
 
@@ -409,6 +449,238 @@ namespace Swig {
 #include <algorithm>
 #include <stdexcept>
 
+SWIGINTERN std::vector< double > *new_std_vector_Sl_double_Sg___SWIG_2(int capacity){
+        std::vector< double >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< double >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN double std_vector_Sl_double_Sg__getitemcopy(std::vector< double > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< double >::value_type const &std_vector_Sl_double_Sg__getitem(std::vector< double > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__setitem(std::vector< double > *self,int index,double const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__AddRange(std::vector< double > *self,std::vector< double > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< double > *std_vector_Sl_double_Sg__GetRange(std::vector< double > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< double >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__Insert(std::vector< double > *self,int index,double const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__InsertRange(std::vector< double > *self,int index,std::vector< double > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__RemoveAt(std::vector< double > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__RemoveRange(std::vector< double > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< double > *std_vector_Sl_double_Sg__Repeat(double const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< double >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__Reverse__SWIG_0(std::vector< double > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__Reverse__SWIG_1(std::vector< double > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_double_Sg__SetRange(std::vector< double > *self,int index,std::vector< double > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN bool std_vector_Sl_double_Sg__Contains(std::vector< double > *self,double const &value){
+        return std::find(self->begin(), self->end(), value) != self->end();
+      }
+SWIGINTERN int std_vector_Sl_double_Sg__IndexOf(std::vector< double > *self,double const &value){
+        int index = -1;
+        std::vector< double >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end())
+          index = (int)(it - self->begin());
+        return index;
+      }
+SWIGINTERN int std_vector_Sl_double_Sg__LastIndexOf(std::vector< double > *self,double const &value){
+        int index = -1;
+        std::vector< double >::reverse_iterator rit = std::find(self->rbegin(), self->rend(), value);
+        if (rit != self->rend())
+          index = (int)(self->rend() - 1 - rit);
+        return index;
+      }
+SWIGINTERN bool std_vector_Sl_double_Sg__Remove(std::vector< double > *self,double const &value){
+        std::vector< double >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end()) {
+          self->erase(it);
+          return true;
+        }
+        return false;
+      }
+SWIGINTERN std::vector< int > *new_std_vector_Sl_int_Sg___SWIG_2(int capacity){
+        std::vector< int >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< int >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN int std_vector_Sl_int_Sg__getitemcopy(std::vector< int > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::vector< int >::value_type const &std_vector_Sl_int_Sg__getitem(std::vector< int > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__setitem(std::vector< int > *self,int index,int const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__AddRange(std::vector< int > *self,std::vector< int > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< int > *std_vector_Sl_int_Sg__GetRange(std::vector< int > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< int >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__Insert(std::vector< int > *self,int index,int const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__InsertRange(std::vector< int > *self,int index,std::vector< int > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__RemoveAt(std::vector< int > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__RemoveRange(std::vector< int > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< int > *std_vector_Sl_int_Sg__Repeat(int const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< int >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__Reverse__SWIG_0(std::vector< int > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__Reverse__SWIG_1(std::vector< int > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_int_Sg__SetRange(std::vector< int > *self,int index,std::vector< int > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN bool std_vector_Sl_int_Sg__Contains(std::vector< int > *self,int const &value){
+        return std::find(self->begin(), self->end(), value) != self->end();
+      }
+SWIGINTERN int std_vector_Sl_int_Sg__IndexOf(std::vector< int > *self,int const &value){
+        int index = -1;
+        std::vector< int >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end())
+          index = (int)(it - self->begin());
+        return index;
+      }
+SWIGINTERN int std_vector_Sl_int_Sg__LastIndexOf(std::vector< int > *self,int const &value){
+        int index = -1;
+        std::vector< int >::reverse_iterator rit = std::find(self->rbegin(), self->rend(), value);
+        if (rit != self->rend())
+          index = (int)(self->rend() - 1 - rit);
+        return index;
+      }
+SWIGINTERN bool std_vector_Sl_int_Sg__Remove(std::vector< int > *self,int const &value){
+        std::vector< int >::iterator it = std::find(self->begin(), self->end(), value);
+        if (it != self->end()) {
+          self->erase(it);
+          return true;
+        }
+        return false;
+      }
 
 SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
   if (code == SWIG_ValueError) {
@@ -458,6 +730,10 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 #include "ompl/base/State.h"
 #include "ompl/base/StateValidityChecker.h"
 #include "ompl/base/ValidStateSampler.h"
+#include "ompl/base/samplers/UniformValidStateSampler.h"
+#include "ompl/base/samplers/GaussianValidStateSampler.h"
+#include "ompl/base/samplers/ObstacleBasedValidStateSampler.h"
+#include "ompl/base/samplers/MaximizeClearanceValidStateSampler.h"
 #include "ompl/base/MotionValidator.h"
 #include "ompl/base/PlannerData.h"
 #include "ompl/base/PlannerTerminationCondition.h"
@@ -475,6 +751,11 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 #include "ompl/base/spaces/RealVectorStateSpace.h"
 #include "ompl/base/SpaceInformation.h"
 #include "ompl/base/OptimizationObjective.h"
+#include "ompl/base/objectives/StateCostIntegralObjective.h"
+#include "ompl/base/objectives/MaximizeMinClearanceObjective.h"
+#include "ompl/base/objectives/PathLengthOptimizationObjective.h"
+
+using ValidStateSamplerAllocator = std::function<ompl::base::ValidStateSamplerPtr(const ompl::base::SpaceInformation *)>;
 
 
 
@@ -487,6 +768,21 @@ struct SWIG_null_deleter {
 #define SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW
 #define SWIG_NO_NULL_DELETER_SWIG_POINTER_OWN
 
+
+      struct ValidStateSamplerAllocatorDirector {
+        virtual ~ValidStateSamplerAllocatorDirector() {}
+        virtual ompl::base::ValidStateSamplerPtr Invoke(const ompl::base::SpaceInformation *) = 0;
+      };
+    
+SWIGINTERN std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *new_std_function_Sl_ompl_base_ValidStateSamplerPtr_Sp_ompl_base_SpaceInformation_SS_const_Sm__SP__Sg___SWIG_2(ValidStateSamplerAllocatorDirector *in){
+            return new std::function<ompl::base::ValidStateSamplerPtr(const ompl::base::SpaceInformation *)>([=](/*@SWIG:std_function.i,26,FOR_EACH@*/ 
+  const ompl::base::SpaceInformation *&& arg0
+/*@SWIG@*/){
+                  return in->Invoke(/*@SWIG:std_function.i,26,FOR_EACH@*/ 
+  std::forward<const ompl::base::SpaceInformation *>(arg0)
+/*@SWIG@*/);
+            });
+          }
 
 
 /* ---------------------------------------------------
@@ -728,10 +1024,973 @@ void SwigDirector_MotionValidator::swig_init_callbacks() {
   swig_callbackcheckMotion__SWIG_1 = 0;
 }
 
+SwigDirector_ValidStateSamplerAllocatorDirector::SwigDirector_ValidStateSamplerAllocatorDirector() : ValidStateSamplerAllocatorDirector(), Swig::Director() {
+  swig_init_callbacks();
+}
+
+SwigDirector_ValidStateSamplerAllocatorDirector::~SwigDirector_ValidStateSamplerAllocatorDirector() {
+  
+}
+
+
+ompl::base::ValidStateSamplerPtr SwigDirector_ValidStateSamplerAllocatorDirector::Invoke(ompl::base::SpaceInformation const *arg0) {
+  ompl::base::ValidStateSamplerPtr c_result ;
+  void * jresult = 0 ;
+  void * jarg0 = 0 ;
+  
+  if (!swig_callbackInvoke) {
+    Swig::DirectorPureVirtualException::raise("ValidStateSamplerAllocatorDirector::Invoke");
+    return c_result;
+  } else {
+    jarg0 = arg0 ? new std::shared_ptr< const ompl::base::SpaceInformation >(arg0 SWIG_NO_NULL_DELETER_0) : 0; 
+    jresult = (void *) swig_callbackInvoke(jarg0);
+    if (jresult) {
+      std::shared_ptr<  ompl::base::ValidStateSampler > *smartarg = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jresult;
+      c_result = *smartarg;
+    }
+    
+  }
+  return c_result;
+}
+
+void SwigDirector_ValidStateSamplerAllocatorDirector::swig_connect_director(SWIG_Callback0_t callbackInvoke) {
+  swig_callbackInvoke = callbackInvoke;
+}
+
+void SwigDirector_ValidStateSamplerAllocatorDirector::swig_init_callbacks() {
+  swig_callbackInvoke = 0;
+}
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_doubleArray___(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  double *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  result = (double *)new_doubleArray(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_doubleArray___(void * jarg1) {
+  double *arg1 = (double *) 0 ;
+  
+  arg1 = (double *)jarg1; 
+  delete_doubleArray(arg1);
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_doubleArray_getitem___(void * jarg1, int jarg2) {
+  double jresult ;
+  double *arg1 = (double *) 0 ;
+  int arg2 ;
+  double result;
+  
+  arg1 = (double *)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (double)doubleArray_getitem(arg1,arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleArray_setitem___(void * jarg1, int jarg2, double jarg3) {
+  double *arg1 = (double *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  
+  arg1 = (double *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  doubleArray_setitem(arg1,arg2,arg3);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_intArray___(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  int *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  result = (int *)new_intArray(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_intArray___(void * jarg1) {
+  int *arg1 = (int *) 0 ;
+  
+  arg1 = (int *)jarg1; 
+  delete_intArray(arg1);
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_intArray_getitem___(void * jarg1, int jarg2) {
+  int jresult ;
+  int *arg1 = (int *) 0 ;
+  int arg2 ;
+  int result;
+  
+  arg1 = (int *)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (int)intArray_getitem(arg1,arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intArray_setitem___(void * jarg1, int jarg2, int jarg3) {
+  int *arg1 = (int *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (int *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  intArray_setitem(arg1,arg2,arg3);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_Clear___(void * jarg1) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_Add___(void * jarg1, double jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->push_back((double const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_OmplfBase_doubleVector_size___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::size_type result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  result = ((std::vector< double > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_OmplfBase_doubleVector_capacity___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::size_type result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  result = ((std::vector< double > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_reserve___(void * jarg1, unsigned long jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double >::size_type arg2 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (std::vector< double >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_doubleVector__SWIG_0___() {
+  void * jresult ;
+  std::vector< double > *result = 0 ;
+  
+  result = (std::vector< double > *)new std::vector< double >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_doubleVector__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  std::vector< double > *arg1 = 0 ;
+  std::vector< double > *result = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< double > *)new std::vector< double >((std::vector< double > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_doubleVector__SWIG_2___(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< double > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< double > *)new_std_vector_Sl_double_Sg___SWIG_2(arg1);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_doubleVector_getitemcopy___(void * jarg1, int jarg2) {
+  double jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  double result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (double)std_vector_Sl_double_Sg__getitemcopy(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_doubleVector_getitem___(void * jarg1, int jarg2) {
+  double jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  std::vector< double >::value_type *result = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< double >::value_type *) &std_vector_Sl_double_Sg__getitem(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_setitem___(void * jarg1, int jarg2, double jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  double *arg3 = 0 ;
+  double temp3 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (double)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_double_Sg__setitem(arg1,arg2,(double const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_AddRange___(void * jarg1, void * jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  std::vector< double > *arg2 = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (std::vector< double > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_double_Sg__AddRange(arg1,(std::vector< double > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_doubleVector_GetRange___(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< double > *result = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< double > *)std_vector_Sl_double_Sg__GetRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_Insert___(void * jarg1, int jarg2, double jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  double *arg3 = 0 ;
+  double temp3 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (double)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_double_Sg__Insert(arg1,arg2,(double const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  std::vector< double > *arg3 = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< double > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_double_Sg__InsertRange(arg1,arg2,(std::vector< double > const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_RemoveAt___(void * jarg1, int jarg2) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_double_Sg__RemoveAt(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_double_Sg__RemoveRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_doubleVector_Repeat___(double jarg1, int jarg2) {
+  void * jresult ;
+  double *arg1 = 0 ;
+  int arg2 ;
+  double temp1 ;
+  std::vector< double > *result = 0 ;
+  
+  temp1 = (double)jarg1; 
+  arg1 = &temp1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< double > *)std_vector_Sl_double_Sg__Repeat((double const &)*arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_Reverse__SWIG_0___(void * jarg1) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  std_vector_Sl_double_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_double_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_doubleVector_SetRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  int arg2 ;
+  std::vector< double > *arg3 = 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< double > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< double > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_double_Sg__SetRange(arg1,arg2,(std::vector< double > const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_doubleVector_Contains___(void * jarg1, double jarg2) {
+  unsigned int jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_double_Sg__Contains(arg1,(double const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_doubleVector_IndexOf___(void * jarg1, double jarg2) {
+  int jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  int result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_double_Sg__IndexOf(arg1,(double const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_doubleVector_LastIndexOf___(void * jarg1, double jarg2) {
+  int jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  int result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_double_Sg__LastIndexOf(arg1,(double const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_doubleVector_Remove___(void * jarg1, double jarg2) {
+  unsigned int jresult ;
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  double *arg2 = 0 ;
+  double temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  temp2 = (double)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_double_Sg__Remove(arg1,(double const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_doubleVector___(void * jarg1) {
+  std::vector< double > *arg1 = (std::vector< double > *) 0 ;
+  
+  arg1 = (std::vector< double > *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_Clear___(void * jarg1) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_Add___(void * jarg1, int jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  (arg1)->push_back((int const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_OmplfBase_intVector_size___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  result = ((std::vector< int > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_OmplfBase_intVector_capacity___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  result = ((std::vector< int > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_reserve___(void * jarg1, unsigned long jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int >::size_type arg2 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (std::vector< int >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_intVector__SWIG_0___() {
+  void * jresult ;
+  std::vector< int > *result = 0 ;
+  
+  result = (std::vector< int > *)new std::vector< int >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_intVector__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  std::vector< int > *arg1 = 0 ;
+  std::vector< int > *result = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< int > *)new std::vector< int >((std::vector< int > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_intVector__SWIG_2___(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< int > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< int > *)new_std_vector_Sl_int_Sg___SWIG_2(arg1);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_intVector_getitemcopy___(void * jarg1, int jarg2) {
+  int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (int)std_vector_Sl_int_Sg__getitemcopy(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_intVector_getitem___(void * jarg1, int jarg2) {
+  int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  std::vector< int >::value_type *result = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< int >::value_type *) &std_vector_Sl_int_Sg__getitem(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_setitem___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int *arg3 = 0 ;
+  int temp3 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (int)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_int_Sg__setitem(arg1,arg2,(int const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_AddRange___(void * jarg1, void * jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  std::vector< int > *arg2 = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (std::vector< int > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_int_Sg__AddRange(arg1,(std::vector< int > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_intVector_GetRange___(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< int > *result = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< int > *)std_vector_Sl_int_Sg__GetRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_Insert___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int *arg3 = 0 ;
+  int temp3 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = (int)jarg3; 
+  arg3 = &temp3; 
+  try {
+    std_vector_Sl_int_Sg__Insert(arg1,arg2,(int const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  std::vector< int > *arg3 = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< int > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_int_Sg__InsertRange(arg1,arg2,(std::vector< int > const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_RemoveAt___(void * jarg1, int jarg2) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_int_Sg__RemoveAt(arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_int_Sg__RemoveRange(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_intVector_Repeat___(int jarg1, int jarg2) {
+  void * jresult ;
+  int *arg1 = 0 ;
+  int arg2 ;
+  int temp1 ;
+  std::vector< int > *result = 0 ;
+  
+  temp1 = (int)jarg1; 
+  arg1 = &temp1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< int > *)std_vector_Sl_int_Sg__Repeat((int const &)*arg1,arg2);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_Reverse__SWIG_0___(void * jarg1) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  std_vector_Sl_int_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_int_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  } catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_intVector_SetRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ;
+  std::vector< int > *arg3 = 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< int > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< int > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_int_Sg__SetRange(arg1,arg2,(std::vector< int > const &)*arg3);
+  } catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_intVector_Contains___(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_int_Sg__Contains(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_intVector_IndexOf___(void * jarg1, int jarg2) {
+  int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  int result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_int_Sg__IndexOf(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_OmplfBase_intVector_LastIndexOf___(void * jarg1, int jarg2) {
+  int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  int result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  result = (int)std_vector_Sl_int_Sg__LastIndexOf(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_intVector_Remove___(void * jarg1, int jarg2) {
+  unsigned int jresult ;
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int *arg2 = 0 ;
+  int temp2 ;
+  bool result;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  temp2 = (int)jarg2; 
+  arg2 = &temp2; 
+  result = (bool)std_vector_Sl_int_Sg__Remove(arg1,(int const &)*arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_intVector___(void * jarg1) {
+  std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  
+  arg1 = (std::vector< int > *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_now___() {
   void * jresult ;
@@ -2660,18 +3919,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_StateValidityChecker__SWIG_0_
       };
     }
   }
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::StateValidityChecker >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_StateValidityChecker___(void * jarg1) {
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
-      delete arg1;
+      (void)arg1; delete smartarg1;
     } catch (const std::exception& e) {
       {
         SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
@@ -2685,9 +3949,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_isVali
   unsigned int jresult ;
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   {
     try {
@@ -2708,9 +3975,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_isVali
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   double *arg3 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (double *)jarg3;
   if (!arg3) {
@@ -2736,9 +4006,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_isVali
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   double *arg3 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (double *)jarg3;
   if (!arg3) {
@@ -2766,9 +4039,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_isVali
   double *arg3 = 0 ;
   ompl::base::State *arg4 = (ompl::base::State *) 0 ;
   bool *arg5 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (double *)jarg3;
   if (!arg3) {
@@ -2802,9 +4078,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_isVali
   double *arg3 = 0 ;
   ompl::base::State *arg4 = (ompl::base::State *) 0 ;
   bool *arg5 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (double *)jarg3;
   if (!arg3) {
@@ -2835,9 +4114,12 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_clearance__S
   double jresult ;
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   double result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   {
     try {
@@ -2857,9 +4139,12 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_clearanceSwi
   double jresult ;
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   double result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   {
     try {
@@ -2881,9 +4166,12 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_clearance__S
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   ompl::base::State *arg3 = (ompl::base::State *) 0 ;
   bool *arg4 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   double result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (ompl::base::State *)jarg3; 
   arg4 = (bool *)jarg4;
@@ -2911,9 +4199,12 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_clearanceSwi
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   ompl::base::State *arg3 = (ompl::base::State *) 0 ;
   bool *arg4 = 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   double result;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (ompl::base::State *)jarg3; 
   arg4 = (bool *)jarg4;
@@ -2938,9 +4229,12 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_clearanceSwi
 SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_getSpecs___(void * jarg1) {
   void * jresult ;
   ompl::base::StateValidityChecker *arg1 = (ompl::base::StateValidityChecker *) 0 ;
+  std::shared_ptr< ompl::base::StateValidityChecker const > *smartarg1 = 0 ;
   ompl::base::StateValidityCheckerSpecs *result = 0 ;
   
-  arg1 = (ompl::base::StateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::StateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (ompl::base::StateValidityCheckerSpecs *) &((ompl::base::StateValidityChecker const *)arg1)->getSpecs();
@@ -2956,8 +4250,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_getSpecs___(
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_StateValidityChecker_director_connect___(void *objarg, SwigDirector_StateValidityChecker::SWIG_Callback0_t callback0, SwigDirector_StateValidityChecker::SWIG_Callback1_t callback1, SwigDirector_StateValidityChecker::SWIG_Callback2_t callback2, SwigDirector_StateValidityChecker::SWIG_Callback3_t callback3, SwigDirector_StateValidityChecker::SWIG_Callback4_t callback4) {
-  ompl::base::StateValidityChecker *obj = (ompl::base::StateValidityChecker *)objarg;
-  SwigDirector_StateValidityChecker *director = static_cast<SwigDirector_StateValidityChecker *>(obj);
+  std::shared_ptr< ompl::base::StateValidityChecker > *obj = (std::shared_ptr< ompl::base::StateValidityChecker > *)objarg;
+  // Keep a local instance of the smart pointer around while we are using the raw pointer
+  // Avoids using smart pointer specific API.
+  SwigDirector_StateValidityChecker *director = static_cast<SwigDirector_StateValidityChecker *>(obj->operator->());
   director->swig_connect_director(callback0, callback1, callback2, callback3, callback4);
 }
 
@@ -2980,7 +4276,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_AllValidStateValidityChecker_
       };
     }
   }
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::AllValidStateValidityChecker >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
@@ -2989,9 +4287,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_AllValidStateValidityChecke
   unsigned int jresult ;
   ompl::base::AllValidStateValidityChecker *arg1 = (ompl::base::AllValidStateValidityChecker *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::AllValidStateValidityChecker const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::AllValidStateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::AllValidStateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::AllValidStateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   {
     try {
@@ -3009,11 +4310,14 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_AllValidStateValidityChecke
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_AllValidStateValidityChecker___(void * jarg1) {
   ompl::base::AllValidStateValidityChecker *arg1 = (ompl::base::AllValidStateValidityChecker *) 0 ;
+  std::shared_ptr< ompl::base::AllValidStateValidityChecker > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::AllValidStateValidityChecker *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::AllValidStateValidityChecker > *)jarg1;
+  arg1 = (ompl::base::AllValidStateValidityChecker *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
-      delete arg1;
+      (void)arg1; delete smartarg1;
     } catch (const std::exception& e) {
       {
         SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
@@ -3041,18 +4345,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ValidStateSampler___(void * j
       };
     }
   }
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::ValidStateSampler >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ValidStateSampler___(void * jarg1) {
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
-      delete arg1;
+      (void)arg1; delete smartarg1;
     } catch (const std::exception& e) {
       {
         SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
@@ -3065,9 +4374,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ValidStateSampler___(void * 
 SWIGEXPORT char * SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_getName___(void * jarg1) {
   char * jresult ;
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler const > *smartarg1 = 0 ;
   std::string *result = 0 ;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (std::string *) &((ompl::base::ValidStateSampler const *)arg1)->getName();
@@ -3085,8 +4397,11 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_getName___(void
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_setName___(void * jarg1, char * jarg2) {
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
   std::string *arg2 = 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   if (!jarg2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
     return ;
@@ -3109,9 +4424,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_sample___
   unsigned int jresult ;
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   {
     try {
@@ -3133,9 +4451,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_sampleNea
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   ompl::base::State *arg3 = (ompl::base::State *) 0 ;
   double arg4 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (ompl::base::State *)jarg3; 
   arg4 = (double)jarg4; 
@@ -3156,8 +4477,11 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_sampleNea
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_setNrAttempts___(void * jarg1, unsigned int jarg2) {
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
   unsigned int arg2 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (unsigned int)jarg2; 
   {
     try {
@@ -3174,9 +4498,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_setNrAttempts___(
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_getNrAttempts___(void * jarg1) {
   unsigned int jresult ;
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler const > *smartarg1 = 0 ;
   unsigned int result;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (unsigned int)((ompl::base::ValidStateSampler const *)arg1)->getNrAttempts();
@@ -3194,9 +4521,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_getNrAtte
 SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_params___SWIG_0___(void * jarg1) {
   void * jresult ;
   ompl::base::ValidStateSampler *arg1 = (ompl::base::ValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::ValidStateSampler > *smartarg1 = 0 ;
   ompl::base::ParamSet *result = 0 ;
   
-  arg1 = (ompl::base::ValidStateSampler *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (ompl::base::ParamSet *) &(arg1)->params();
@@ -3212,9 +4542,491 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_params___SWIG_0
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ValidStateSampler_director_connect___(void *objarg, SwigDirector_ValidStateSampler::SWIG_Callback0_t callback0, SwigDirector_ValidStateSampler::SWIG_Callback1_t callback1) {
-  ompl::base::ValidStateSampler *obj = (ompl::base::ValidStateSampler *)objarg;
-  SwigDirector_ValidStateSampler *director = static_cast<SwigDirector_ValidStateSampler *>(obj);
+  std::shared_ptr< ompl::base::ValidStateSampler > *obj = (std::shared_ptr< ompl::base::ValidStateSampler > *)objarg;
+  // Keep a local instance of the smart pointer around while we are using the raw pointer
+  // Avoids using smart pointer specific API.
+  SwigDirector_ValidStateSampler *director = static_cast<SwigDirector_ValidStateSampler *>(obj->operator->());
   director->swig_connect_director(callback0, callback1);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_UniformValidStateSampler___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
+  ompl::base::UniformValidStateSampler *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
+  arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (ompl::base::UniformValidStateSampler *)new ompl::base::UniformValidStateSampler((ompl::base::SpaceInformation const *)arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::UniformValidStateSampler >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_UniformValidStateSampler___(void * jarg1) {
+  ompl::base::UniformValidStateSampler *arg1 = (ompl::base::UniformValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::UniformValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::UniformValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::UniformValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_UniformValidStateSampler_sample___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  ompl::base::UniformValidStateSampler *arg1 = (ompl::base::UniformValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::UniformValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::UniformValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::UniformValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (bool)(arg1)->sample(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_UniformValidStateSampler_sampleNear___(void * jarg1, void * jarg2, void * jarg3, double jarg4) {
+  unsigned int jresult ;
+  ompl::base::UniformValidStateSampler *arg1 = (ompl::base::UniformValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  double arg4 ;
+  std::shared_ptr< ompl::base::UniformValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::UniformValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::UniformValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  arg4 = (double)jarg4; 
+  {
+    try {
+      result = (bool)(arg1)->sampleNear(arg2,(ompl::base::State const *)arg3,arg4);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_GaussianValidStateSampler___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
+  ompl::base::GaussianValidStateSampler *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
+  arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (ompl::base::GaussianValidStateSampler *)new ompl::base::GaussianValidStateSampler((ompl::base::SpaceInformation const *)arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::GaussianValidStateSampler >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_GaussianValidStateSampler___(void * jarg1) {
+  ompl::base::GaussianValidStateSampler *arg1 = (ompl::base::GaussianValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::GaussianValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::GaussianValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::GaussianValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_GaussianValidStateSampler_sample___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  ompl::base::GaussianValidStateSampler *arg1 = (ompl::base::GaussianValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::GaussianValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::GaussianValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::GaussianValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (bool)(arg1)->sample(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_GaussianValidStateSampler_sampleNear___(void * jarg1, void * jarg2, void * jarg3, double jarg4) {
+  unsigned int jresult ;
+  ompl::base::GaussianValidStateSampler *arg1 = (ompl::base::GaussianValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  double arg4 ;
+  std::shared_ptr< ompl::base::GaussianValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::GaussianValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::GaussianValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  arg4 = (double)jarg4; 
+  {
+    try {
+      result = (bool)(arg1)->sampleNear(arg2,(ompl::base::State const *)arg3,arg4);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_GaussianValidStateSampler_getStdDev___(void * jarg1) {
+  double jresult ;
+  ompl::base::GaussianValidStateSampler *arg1 = (ompl::base::GaussianValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::GaussianValidStateSampler const > *smartarg1 = 0 ;
+  double result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::GaussianValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::GaussianValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (double)((ompl::base::GaussianValidStateSampler const *)arg1)->getStdDev();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_GaussianValidStateSampler_setStdDev___(void * jarg1, double jarg2) {
+  ompl::base::GaussianValidStateSampler *arg1 = (ompl::base::GaussianValidStateSampler *) 0 ;
+  double arg2 ;
+  std::shared_ptr< ompl::base::GaussianValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::GaussianValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::GaussianValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (double)jarg2; 
+  {
+    try {
+      (arg1)->setStdDev(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ObstacleBasedValidStateSampler___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
+  ompl::base::ObstacleBasedValidStateSampler *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
+  arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (ompl::base::ObstacleBasedValidStateSampler *)new ompl::base::ObstacleBasedValidStateSampler((ompl::base::SpaceInformation const *)arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::ObstacleBasedValidStateSampler >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ObstacleBasedValidStateSampler___(void * jarg1) {
+  ompl::base::ObstacleBasedValidStateSampler *arg1 = (ompl::base::ObstacleBasedValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::ObstacleBasedValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ObstacleBasedValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ObstacleBasedValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ObstacleBasedValidStateSampler_sample___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  ompl::base::ObstacleBasedValidStateSampler *arg1 = (ompl::base::ObstacleBasedValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::ObstacleBasedValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ObstacleBasedValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ObstacleBasedValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (bool)(arg1)->sample(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ObstacleBasedValidStateSampler_sampleNear___(void * jarg1, void * jarg2, void * jarg3, double jarg4) {
+  unsigned int jresult ;
+  ompl::base::ObstacleBasedValidStateSampler *arg1 = (ompl::base::ObstacleBasedValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  double arg4 ;
+  std::shared_ptr< ompl::base::ObstacleBasedValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::ObstacleBasedValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::ObstacleBasedValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  arg4 = (double)jarg4; 
+  {
+    try {
+      result = (bool)(arg1)->sampleNear(arg2,(ompl::base::State const *)arg3,arg4);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_MaximizeClearanceValidStateSampler___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
+  ompl::base::MaximizeClearanceValidStateSampler *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
+  arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (ompl::base::MaximizeClearanceValidStateSampler *)new ompl::base::MaximizeClearanceValidStateSampler((ompl::base::SpaceInformation const *)arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::MaximizeClearanceValidStateSampler >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_MaximizeClearanceValidStateSampler___(void * jarg1) {
+  ompl::base::MaximizeClearanceValidStateSampler *arg1 = (ompl::base::MaximizeClearanceValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MaximizeClearanceValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::MaximizeClearanceValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MaximizeClearanceValidStateSampler_sample___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  ompl::base::MaximizeClearanceValidStateSampler *arg1 = (ompl::base::MaximizeClearanceValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MaximizeClearanceValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::MaximizeClearanceValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (bool)(arg1)->sample(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MaximizeClearanceValidStateSampler_sampleNear___(void * jarg1, void * jarg2, void * jarg3, double jarg4) {
+  unsigned int jresult ;
+  ompl::base::MaximizeClearanceValidStateSampler *arg1 = (ompl::base::MaximizeClearanceValidStateSampler *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  double arg4 ;
+  std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MaximizeClearanceValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::MaximizeClearanceValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  arg4 = (double)jarg4; 
+  {
+    try {
+      result = (bool)(arg1)->sampleNear(arg2,(ompl::base::State const *)arg3,arg4);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_MaximizeClearanceValidStateSampler_setNrImproveAttempts___(void * jarg1, unsigned int jarg2) {
+  ompl::base::MaximizeClearanceValidStateSampler *arg1 = (ompl::base::MaximizeClearanceValidStateSampler *) 0 ;
+  unsigned int arg2 ;
+  std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MaximizeClearanceValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::MaximizeClearanceValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (unsigned int)jarg2; 
+  {
+    try {
+      (arg1)->setNrImproveAttempts(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MaximizeClearanceValidStateSampler_getNrImproveAttempts___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::base::MaximizeClearanceValidStateSampler *arg1 = (ompl::base::MaximizeClearanceValidStateSampler *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler const > *smartarg1 = 0 ;
+  unsigned int result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MaximizeClearanceValidStateSampler > *)jarg1;
+  arg1 = (ompl::base::MaximizeClearanceValidStateSampler *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (unsigned int)((ompl::base::MaximizeClearanceValidStateSampler const *)arg1)->getNrImproveAttempts();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
 }
 
 
@@ -3236,18 +5048,23 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_MotionValidator__SWIG_0___(vo
       };
     }
   }
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::MotionValidator >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_MotionValidator___(void * jarg1) {
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
-      delete arg1;
+      (void)arg1; delete smartarg1;
     } catch (const std::exception& e) {
       {
         SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
@@ -3262,9 +5079,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_checkMotion
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (ompl::base::State *)jarg3; 
   {
@@ -3287,9 +5107,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_checkMotion
   ompl::base::State *arg2 = (ompl::base::State *) 0 ;
   ompl::base::State *arg3 = (ompl::base::State *) 0 ;
   std::pair< ompl::base::State *,double > *arg4 = 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   bool result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (ompl::base::State *)jarg2; 
   arg3 = (ompl::base::State *)jarg3; 
   arg4 = (std::pair< ompl::base::State *,double > *)jarg4;
@@ -3314,9 +5137,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_checkMotion
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getValidMotionCount___(void * jarg1) {
   unsigned int jresult ;
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   unsigned int result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (unsigned int)((ompl::base::MotionValidator const *)arg1)->getValidMotionCount();
@@ -3334,9 +5160,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getValidMot
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getInvalidMotionCount___(void * jarg1) {
   unsigned int jresult ;
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   unsigned int result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (unsigned int)((ompl::base::MotionValidator const *)arg1)->getInvalidMotionCount();
@@ -3354,9 +5183,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getInvalidM
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getCheckedMotionCount___(void * jarg1) {
   unsigned int jresult ;
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   unsigned int result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (unsigned int)((ompl::base::MotionValidator const *)arg1)->getCheckedMotionCount();
@@ -3374,9 +5206,12 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getCheckedM
 SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getValidMotionFraction___(void * jarg1) {
   double jresult ;
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator const > *smartarg1 = 0 ;
   double result;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       result = (double)((ompl::base::MotionValidator const *)arg1)->getValidMotionFraction();
@@ -3393,8 +5228,11 @@ SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_MotionValidator_getValidMotionFra
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_MotionValidator_resetMotionCounter___(void * jarg1) {
   ompl::base::MotionValidator *arg1 = (ompl::base::MotionValidator *) 0 ;
+  std::shared_ptr< ompl::base::MotionValidator > *smartarg1 = 0 ;
   
-  arg1 = (ompl::base::MotionValidator *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MotionValidator > *)jarg1;
+  arg1 = (ompl::base::MotionValidator *)(smartarg1 ? smartarg1->get() : 0); 
   {
     try {
       (arg1)->resetMotionCounter();
@@ -3408,8 +5246,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_MotionValidator_resetMotionCounter_
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_MotionValidator_director_connect___(void *objarg, SwigDirector_MotionValidator::SWIG_Callback0_t callback0, SwigDirector_MotionValidator::SWIG_Callback1_t callback1) {
-  ompl::base::MotionValidator *obj = (ompl::base::MotionValidator *)objarg;
-  SwigDirector_MotionValidator *director = static_cast<SwigDirector_MotionValidator *>(obj);
+  std::shared_ptr< ompl::base::MotionValidator > *obj = (std::shared_ptr< ompl::base::MotionValidator > *)objarg;
+  // Keep a local instance of the smart pointer around while we are using the raw pointer
+  // Avoids using smart pointer specific API.
+  SwigDirector_MotionValidator *director = static_cast<SwigDirector_MotionValidator *>(obj->operator->());
   director->swig_connect_director(callback0, callback1);
 }
 
@@ -13992,15 +15832,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_setStateValidityCh
   ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
   ompl::base::StateValidityCheckerPtr *arg2 = 0 ;
   std::shared_ptr< ompl::base::SpaceInformation > *smartarg1 = 0 ;
+  ompl::base::StateValidityCheckerPtr tempnull2 ;
   
   
   smartarg1 = (std::shared_ptr<  ompl::base::SpaceInformation > *)jarg1;
   arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (ompl::base::StateValidityCheckerPtr *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::StateValidityCheckerPtr const & type is null", 0);
-    return ;
-  } 
+  arg2 = jarg2 ? (ompl::base::StateValidityCheckerPtr *)jarg2 : &tempnull2; 
   {
     try {
       (arg1)->setStateValidityChecker((ompl::base::StateValidityCheckerPtr const &)*arg2);
@@ -14056,7 +15893,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_getStateValidity
       };
     }
   }
-  jresult = (void *)result; 
+  jresult = *result ? new ompl::base::StateValidityCheckerPtr(*result) : 0; 
   return jresult;
 }
 
@@ -14065,15 +15902,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_setMotionValidator
   ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
   ompl::base::MotionValidatorPtr *arg2 = 0 ;
   std::shared_ptr< ompl::base::SpaceInformation > *smartarg1 = 0 ;
+  ompl::base::MotionValidatorPtr tempnull2 ;
   
   
   smartarg1 = (std::shared_ptr<  ompl::base::SpaceInformation > *)jarg1;
   arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (ompl::base::MotionValidatorPtr *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::MotionValidatorPtr const & type is null", 0);
-    return ;
-  } 
+  arg2 = jarg2 ? (ompl::base::MotionValidatorPtr *)jarg2 : &tempnull2; 
   {
     try {
       (arg1)->setMotionValidator((ompl::base::MotionValidatorPtr const &)*arg2);
@@ -14104,7 +15938,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_getMotionValidat
       };
     }
   }
-  jresult = (void *)result; 
+  jresult = *result ? new ompl::base::MotionValidatorPtr(*result) : 0; 
   return jresult;
 }
 
@@ -14368,7 +16202,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_allocValidStateS
   void * jresult ;
   ompl::base::SpaceInformation *arg1 = (ompl::base::SpaceInformation *) 0 ;
   std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
-  SwigValueWrapper< std::shared_ptr< ompl::base::ValidStateSampler > > result;
+  ompl::base::ValidStateSamplerPtr result;
   
   
   smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
@@ -14382,7 +16216,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_allocValidStateS
       };
     }
   }
-  jresult = new ompl::base::ValidStateSamplerPtr((const ompl::base::ValidStateSamplerPtr &)result); 
+  jresult = result ? new ompl::base::ValidStateSamplerPtr(result) : 0; 
   return jresult;
 }
 
@@ -14493,16 +16327,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_SpaceInformation_searchVali
   ompl::base::State *arg4 = (ompl::base::State *) 0 ;
   double arg5 ;
   std::shared_ptr< ompl::base::SpaceInformation const > *smartarg1 = 0 ;
+  ompl::base::ValidStateSamplerPtr tempnull2 ;
   bool result;
   
   
   smartarg1 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg1;
   arg1 = (ompl::base::SpaceInformation *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (ompl::base::ValidStateSamplerPtr *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::ValidStateSamplerPtr const & type is null", 0);
-    return 0;
-  } 
+  arg2 = jarg2 ? (ompl::base::ValidStateSamplerPtr *)jarg2 : &tempnull2; 
   arg3 = (ompl::base::State *)jarg3; 
   arg4 = (ompl::base::State *)jarg4; 
   arg5 = (double)jarg5; 
@@ -15958,12 +17789,1312 @@ SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_MultiOptimizationObjective__
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_StateCostIntegralObjective__SWIG_0___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  bool arg2 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::StateCostIntegralObjective *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      result = (ompl::base::StateCostIntegralObjective *)new ompl::base::StateCostIntegralObjective((ompl::base::SpaceInformationPtr const &)*arg1,arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::StateCostIntegralObjective >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_StateCostIntegralObjective__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::StateCostIntegralObjective *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::base::StateCostIntegralObjective *)new ompl::base::StateCostIntegralObjective((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::StateCostIntegralObjective >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_StateCostIntegralObjective_stateCost___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::base::StateCostIntegralObjective *arg1 = (ompl::base::StateCostIntegralObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::StateCostIntegralObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateCostIntegralObjective > *)jarg1;
+  arg1 = (ompl::base::StateCostIntegralObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = ((ompl::base::StateCostIntegralObjective const *)arg1)->stateCost((ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_StateCostIntegralObjective_motionCost___(void * jarg1, void * jarg2, void * jarg3) {
+  void * jresult ;
+  ompl::base::StateCostIntegralObjective *arg1 = (ompl::base::StateCostIntegralObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::StateCostIntegralObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateCostIntegralObjective > *)jarg1;
+  arg1 = (ompl::base::StateCostIntegralObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  {
+    try {
+      result = ((ompl::base::StateCostIntegralObjective const *)arg1)->motionCost((ompl::base::State const *)arg2,(ompl::base::State const *)arg3);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_StateCostIntegralObjective_isMotionCostInterpolationEnabled___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::base::StateCostIntegralObjective *arg1 = (ompl::base::StateCostIntegralObjective *) 0 ;
+  std::shared_ptr< ompl::base::StateCostIntegralObjective const > *smartarg1 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::StateCostIntegralObjective > *)jarg1;
+  arg1 = (ompl::base::StateCostIntegralObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (bool)((ompl::base::StateCostIntegralObjective const *)arg1)->isMotionCostInterpolationEnabled();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_StateCostIntegralObjective___(void * jarg1) {
+  ompl::base::StateCostIntegralObjective *arg1 = (ompl::base::StateCostIntegralObjective *) 0 ;
+  std::shared_ptr< ompl::base::StateCostIntegralObjective > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::StateCostIntegralObjective > *)jarg1;
+  arg1 = (ompl::base::StateCostIntegralObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_MaximizeMinClearanceObjective___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::MaximizeMinClearanceObjective *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::base::MaximizeMinClearanceObjective *)new ompl::base::MaximizeMinClearanceObjective((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::MaximizeMinClearanceObjective >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_MaximizeMinClearanceObjective_stateCost___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::base::MaximizeMinClearanceObjective *arg1 = (ompl::base::MaximizeMinClearanceObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeMinClearanceObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MaximizeMinClearanceObjective > *)jarg1;
+  arg1 = (ompl::base::MaximizeMinClearanceObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = ((ompl::base::MaximizeMinClearanceObjective const *)arg1)->stateCost((ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_MaximizeMinClearanceObjective_isCostBetterThan___(void * jarg1, void * jarg2, void * jarg3) {
+  unsigned int jresult ;
+  ompl::base::MaximizeMinClearanceObjective *arg1 = (ompl::base::MaximizeMinClearanceObjective *) 0 ;
+  ompl::base::Cost arg2 ;
+  ompl::base::Cost arg3 ;
+  std::shared_ptr< ompl::base::MaximizeMinClearanceObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost *argp2 ;
+  ompl::base::Cost *argp3 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MaximizeMinClearanceObjective > *)jarg1;
+  arg1 = (ompl::base::MaximizeMinClearanceObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = (ompl::base::Cost *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null ompl::base::Cost", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  argp3 = (ompl::base::Cost *)jarg3; 
+  if (!argp3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null ompl::base::Cost", 0);
+    return 0;
+  }
+  arg3 = *argp3; 
+  {
+    try {
+      result = (bool)((ompl::base::MaximizeMinClearanceObjective const *)arg1)->isCostBetterThan(arg2,arg3);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_MaximizeMinClearanceObjective_identityCost___(void * jarg1) {
+  void * jresult ;
+  ompl::base::MaximizeMinClearanceObjective *arg1 = (ompl::base::MaximizeMinClearanceObjective *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeMinClearanceObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MaximizeMinClearanceObjective > *)jarg1;
+  arg1 = (ompl::base::MaximizeMinClearanceObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = ((ompl::base::MaximizeMinClearanceObjective const *)arg1)->identityCost();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_MaximizeMinClearanceObjective_infiniteCost___(void * jarg1) {
+  void * jresult ;
+  ompl::base::MaximizeMinClearanceObjective *arg1 = (ompl::base::MaximizeMinClearanceObjective *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeMinClearanceObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::MaximizeMinClearanceObjective > *)jarg1;
+  arg1 = (ompl::base::MaximizeMinClearanceObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = ((ompl::base::MaximizeMinClearanceObjective const *)arg1)->infiniteCost();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_MaximizeMinClearanceObjective___(void * jarg1) {
+  ompl::base::MaximizeMinClearanceObjective *arg1 = (ompl::base::MaximizeMinClearanceObjective *) 0 ;
+  std::shared_ptr< ompl::base::MaximizeMinClearanceObjective > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::MaximizeMinClearanceObjective > *)jarg1;
+  arg1 = (ompl::base::MaximizeMinClearanceObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_PathLengthOptimizationObjective___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::PathLengthOptimizationObjective *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::base::PathLengthOptimizationObjective *)new ompl::base::PathLengthOptimizationObjective((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::base::PathLengthOptimizationObjective >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_PathLengthOptimizationObjective_stateCost___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::base::PathLengthOptimizationObjective *arg1 = (ompl::base::PathLengthOptimizationObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::PathLengthOptimizationObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::PathLengthOptimizationObjective > *)jarg1;
+  arg1 = (ompl::base::PathLengthOptimizationObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = ((ompl::base::PathLengthOptimizationObjective const *)arg1)->stateCost((ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_PathLengthOptimizationObjective_motionCost___(void * jarg1, void * jarg2, void * jarg3) {
+  void * jresult ;
+  ompl::base::PathLengthOptimizationObjective *arg1 = (ompl::base::PathLengthOptimizationObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::PathLengthOptimizationObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::PathLengthOptimizationObjective > *)jarg1;
+  arg1 = (ompl::base::PathLengthOptimizationObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  {
+    try {
+      result = ((ompl::base::PathLengthOptimizationObjective const *)arg1)->motionCost((ompl::base::State const *)arg2,(ompl::base::State const *)arg3);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_PathLengthOptimizationObjective_motionCostHeuristic___(void * jarg1, void * jarg2, void * jarg3) {
+  void * jresult ;
+  ompl::base::PathLengthOptimizationObjective *arg1 = (ompl::base::PathLengthOptimizationObjective *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::State *arg3 = (ompl::base::State *) 0 ;
+  std::shared_ptr< ompl::base::PathLengthOptimizationObjective const > *smartarg1 = 0 ;
+  ompl::base::Cost result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::PathLengthOptimizationObjective > *)jarg1;
+  arg1 = (ompl::base::PathLengthOptimizationObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (ompl::base::State *)jarg2; 
+  arg3 = (ompl::base::State *)jarg3; 
+  {
+    try {
+      result = ((ompl::base::PathLengthOptimizationObjective const *)arg1)->motionCostHeuristic((ompl::base::State const *)arg2,(ompl::base::State const *)arg3);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::Cost((const ompl::base::Cost &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_PathLengthOptimizationObjective_allocInformedStateSampler___(void * jarg1, void * jarg2, unsigned int jarg3) {
+  void * jresult ;
+  ompl::base::PathLengthOptimizationObjective *arg1 = (ompl::base::PathLengthOptimizationObjective *) 0 ;
+  ompl::base::ProblemDefinitionPtr *arg2 = 0 ;
+  unsigned int arg3 ;
+  std::shared_ptr< ompl::base::PathLengthOptimizationObjective const > *smartarg1 = 0 ;
+  ompl::base::ProblemDefinitionPtr tempnull2 ;
+  SwigValueWrapper< std::shared_ptr< ompl::base::InformedSampler > > result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::base::PathLengthOptimizationObjective > *)jarg1;
+  arg1 = (ompl::base::PathLengthOptimizationObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = jarg2 ? (ompl::base::ProblemDefinitionPtr *)jarg2 : &tempnull2; 
+  arg3 = (unsigned int)jarg3; 
+  {
+    try {
+      result = ((ompl::base::PathLengthOptimizationObjective const *)arg1)->allocInformedStateSampler((ompl::base::ProblemDefinitionPtr const &)*arg2,arg3);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new ompl::base::InformedSamplerPtr((const ompl::base::InformedSamplerPtr &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_PathLengthOptimizationObjective___(void * jarg1) {
+  ompl::base::PathLengthOptimizationObjective *arg1 = (ompl::base::PathLengthOptimizationObjective *) 0 ;
+  std::shared_ptr< ompl::base::PathLengthOptimizationObjective > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::base::PathLengthOptimizationObjective > *)jarg1;
+  arg1 = (ompl::base::PathLengthOptimizationObjective *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ValidStateSamplerAllocatorDirector___(void * jarg1) {
+  ValidStateSamplerAllocatorDirector *arg1 = (ValidStateSamplerAllocatorDirector *) 0 ;
+  
+  arg1 = (ValidStateSamplerAllocatorDirector *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ValidStateSamplerAllocatorDirector_Invoke___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ValidStateSamplerAllocatorDirector *arg1 = (ValidStateSamplerAllocatorDirector *) 0 ;
+  ompl::base::SpaceInformation *arg2 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg2 = 0 ;
+  SwigDirector_ValidStateSamplerAllocatorDirector *darg = 0;
+  ompl::base::ValidStateSamplerPtr result;
+  
+  arg1 = (ValidStateSamplerAllocatorDirector *)jarg1; 
+  
+  smartarg2 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg2;
+  arg2 = (ompl::base::SpaceInformation *)(smartarg2 ? smartarg2->get() : 0); 
+  darg = dynamic_cast<SwigDirector_ValidStateSamplerAllocatorDirector *>(arg1);
+  {
+    try {
+      result = (darg)->Invoke((ompl::base::SpaceInformation const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result ? new ompl::base::ValidStateSamplerPtr(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ValidStateSamplerAllocatorDirector___() {
+  void * jresult ;
+  ValidStateSamplerAllocatorDirector *result = 0 ;
+  
+  {
+    try {
+      result = (ValidStateSamplerAllocatorDirector *)new SwigDirector_ValidStateSamplerAllocatorDirector();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ValidStateSamplerAllocatorDirector_director_connect___(void *objarg, SwigDirector_ValidStateSamplerAllocatorDirector::SWIG_Callback0_t callback0) {
+  ValidStateSamplerAllocatorDirector *obj = (ValidStateSamplerAllocatorDirector *)objarg;
+  SwigDirector_ValidStateSamplerAllocatorDirector *director = static_cast<SwigDirector_ValidStateSamplerAllocatorDirector *>(obj);
+  director->swig_connect_director(callback0);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new__function__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *arg1 = 0 ;
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *result = 0 ;
+  
+  arg1 = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)new std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) >((std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ValidStateSamplerAllocator_Invoke___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *arg1 = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *) 0 ;
+  ompl::base::SpaceInformation *arg2 = (ompl::base::SpaceInformation *) 0 ;
+  std::shared_ptr< ompl::base::SpaceInformation const > *smartarg2 = 0 ;
+  ompl::base::ValidStateSamplerPtr result;
+  
+  arg1 = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)jarg1; 
+  
+  smartarg2 = (std::shared_ptr< const ompl::base::SpaceInformation > *)jarg2;
+  arg2 = (ompl::base::SpaceInformation *)(smartarg2 ? smartarg2->get() : 0); 
+  {
+    try {
+      result = ((std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > const *)arg1)->operator ()((ompl::base::SpaceInformation const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result ? new ompl::base::ValidStateSamplerPtr(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new__function__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ValidStateSamplerPtr (*arg1)(ompl::base::SpaceInformation const *) = (ompl::base::ValidStateSamplerPtr (*)(ompl::base::SpaceInformation const *)) (ompl::base::ValidStateSamplerPtr (*)(ompl::base::SpaceInformation const *))0 ;
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *result = 0 ;
+  
+  arg1 = (ompl::base::ValidStateSamplerPtr (*)(ompl::base::SpaceInformation const *))jarg1; 
+  {
+    try {
+      result = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)new std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) >(arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new__function__SWIG_2___(void * jarg1) {
+  void * jresult ;
+  ValidStateSamplerAllocatorDirector *arg1 = (ValidStateSamplerAllocatorDirector *) 0 ;
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *result = 0 ;
+  
+  arg1 = (ValidStateSamplerAllocatorDirector *)jarg1; 
+  {
+    try {
+      result = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)new_std_function_Sl_ompl_base_ValidStateSamplerPtr_Sp_ompl_base_SpaceInformation_SS_const_Sm__SP__Sg___SWIG_2(arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ValidStateSamplerAllocator___(void * jarg1) {
+  std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *arg1 = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *) 0 ;
+  
+  arg1 = (std::function< ompl::base::ValidStateSamplerPtr (ompl::base::SpaceInformation const *) > *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace > *)new ompl::base::ScopedState< ompl::base::StateSpace >((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::StateSpacePtr arg1 ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *result = 0 ;
+  
+  if (jarg1) arg1 = *(ompl::base::StateSpacePtr *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace > *)new ompl::base::ScopedState< ompl::base::StateSpace >(arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_2___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = 0 ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::ScopedState< ompl::base::StateSpace > const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace > *)new ompl::base::ScopedState< ompl::base::StateSpace >((ompl::base::ScopedState< ompl::base::StateSpace > const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_3___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::base::StateSpacePtr arg1 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *result = 0 ;
+  
+  if (jarg1) arg1 = *(ompl::base::StateSpacePtr *)jarg1; 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace > *)new ompl::base::ScopedState< ompl::base::StateSpace >(arg1,(ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ScopedStateStateSpace___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_getSpace___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  ompl::base::StateSpacePtr *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::StateSpacePtr *) &((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->getSpace();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = *result ? new ompl::base::StateSpacePtr(*result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_distance___(void * jarg1, void * jarg2) {
+  double jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  double result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (double)((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->distance((ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_random___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      (arg1)->random();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_enforceBounds___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      (arg1)->enforceBounds();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_satisfiesBounds___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  bool result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = (bool)((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->satisfiesBounds();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_reals___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  std::vector< double > result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = ((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->reals();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace__print__SWIG_0___(void * jarg1, void * jarg2) {
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  std::ostream *arg2 = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  arg2 = (std::ostream *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ostream & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      ((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->print(*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace__print__SWIG_1___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      ((ompl::base::ScopedState< ompl::base::StateSpace > const *)arg1)->print();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace___ref____SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::StateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace >::StateType *) &(arg1)->operator *();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace___deref____SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::StateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace >::StateType *)(arg1)->operator ->();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateStateSpace_get__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::StateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::StateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::StateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::StateSpace >::StateType *)(arg1)->get();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)new ompl::base::ScopedState< ompl::base::RealVectorStateSpace >((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::StateSpacePtr arg1 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *result = 0 ;
+  
+  if (jarg1) arg1 = *(ompl::base::StateSpacePtr *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)new ompl::base::ScopedState< ompl::base::RealVectorStateSpace >(arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_2___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = 0 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)new ompl::base::ScopedState< ompl::base::RealVectorStateSpace >((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_3___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::base::StateSpacePtr arg1 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *result = 0 ;
+  
+  if (jarg1) arg1 = *(ompl::base::StateSpacePtr *)jarg1; 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)new ompl::base::ScopedState< ompl::base::RealVectorStateSpace >(arg1,(ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_delete_ScopedStateRealVectorStateSpace___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_getSpace___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  ompl::base::StateSpacePtr *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::StateSpacePtr *) &((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->getSpace();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = *result ? new ompl::base::StateSpacePtr(*result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_distance___(void * jarg1, void * jarg2) {
+  double jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  ompl::base::State *arg2 = (ompl::base::State *) 0 ;
+  double result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  arg2 = (ompl::base::State *)jarg2; 
+  {
+    try {
+      result = (double)((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->distance((ompl::base::State const *)arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_random___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      (arg1)->random();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_enforceBounds___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      (arg1)->enforceBounds();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_satisfiesBounds___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  bool result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (bool)((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->satisfiesBounds();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_reals___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  std::vector< double > result;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = ((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->reals();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new std::vector< double >((const std::vector< double > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace__print__SWIG_0___(void * jarg1, void * jarg2) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  std::ostream *arg2 = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  arg2 = (std::ostream *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::ostream & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      ((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->print(*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace__print__SWIG_1___(void * jarg1) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      ((ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->print();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace___ref____SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *) &(arg1)->operator *();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace___deref____SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *)(arg1)->operator ->();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_get__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace >::StateType *)(arg1)->get();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_values_set___(void * jarg1, void * jarg2) {
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  double *arg2 = (double *) 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  arg2 = (double *)jarg2; 
+  {
+    try {
+      if (arg1) (*arg1)->values = arg2;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfBase_ScopedStateRealVectorStateSpace_values_get___(void * jarg1) {
+  void * jresult ;
+  ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *) 0 ;
+  double *result = 0 ;
+  
+  arg1 = (ompl::base::ScopedState< ompl::base::RealVectorStateSpace > *)jarg1; 
+  {
+    try {
+      result = (double *) ((*(ompl::base::ScopedState< ompl::base::RealVectorStateSpace > const *)arg1)->values);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT ompl::base::State * SWIGSTDCALL CSharp_OmplfBase_CompoundState_SWIGUpcast___(ompl::base::CompoundState *jarg1) {
     return (ompl::base::State *)jarg1;
 }
 
-SWIGEXPORT ompl::base::StateValidityChecker * SWIGSTDCALL CSharp_OmplfBase_AllValidStateValidityChecker_SWIGUpcast___(ompl::base::AllValidStateValidityChecker *jarg1) {
-    return (ompl::base::StateValidityChecker *)jarg1;
+SWIGEXPORT std::shared_ptr< ompl::base::StateValidityChecker > * SWIGSTDCALL CSharp_OmplfBase_AllValidStateValidityChecker_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::AllValidStateValidityChecker > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::StateValidityChecker >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::ValidStateSampler > * SWIGSTDCALL CSharp_OmplfBase_UniformValidStateSampler_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::UniformValidStateSampler > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::ValidStateSampler >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::ValidStateSampler > * SWIGSTDCALL CSharp_OmplfBase_GaussianValidStateSampler_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::GaussianValidStateSampler > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::ValidStateSampler >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::ValidStateSampler > * SWIGSTDCALL CSharp_OmplfBase_ObstacleBasedValidStateSampler_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::ObstacleBasedValidStateSampler > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::ValidStateSampler >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::ValidStateSampler > * SWIGSTDCALL CSharp_OmplfBase_MaximizeClearanceValidStateSampler_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::MaximizeClearanceValidStateSampler > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::ValidStateSampler >(*jarg1) : 0;
 }
 
 SWIGEXPORT std::shared_ptr< ompl::base::StateSampler > * SWIGSTDCALL CSharp_OmplfBase_CompoundStateSampler_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::CompoundStateSampler > *jarg1) {
@@ -15995,6 +19126,14 @@ SWIGEXPORT std::shared_ptr< ompl::base::StateSpace > * SWIGSTDCALL CSharp_OmplfB
 }
 
 SWIGEXPORT std::shared_ptr< ompl::base::OptimizationObjective > * SWIGSTDCALL CSharp_OmplfBase_MultiOptimizationObjective_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::MultiOptimizationObjective > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::OptimizationObjective >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::OptimizationObjective > * SWIGSTDCALL CSharp_OmplfBase_StateCostIntegralObjective_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::StateCostIntegralObjective > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::OptimizationObjective >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::OptimizationObjective > * SWIGSTDCALL CSharp_OmplfBase_PathLengthOptimizationObjective_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::base::PathLengthOptimizationObjective > *jarg1) {
     return jarg1 ? new std::shared_ptr< ompl::base::OptimizationObjective >(*jarg1) : 0;
 }
 

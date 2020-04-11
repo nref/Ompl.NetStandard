@@ -12,8 +12,10 @@ namespace Ompl.Base {
 
 public class AllValidStateValidityChecker : StateValidityChecker {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnDerived;
 
-  internal AllValidStateValidityChecker(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ompl_basePINVOKE.AllValidStateValidityChecker_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal AllValidStateValidityChecker(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ompl_basePINVOKE.AllValidStateValidityChecker_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -24,8 +26,8 @@ public class AllValidStateValidityChecker : StateValidityChecker {
   protected override void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           ompl_basePINVOKE.delete_AllValidStateValidityChecker(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);

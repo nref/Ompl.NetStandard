@@ -76,5 +76,20 @@ private:
     void swig_init_callbacks();
 };
 
+struct SwigDirector_ValidStateSamplerAllocatorDirector : public ValidStateSamplerAllocatorDirector, public Swig::Director {
+
+public:
+    SwigDirector_ValidStateSamplerAllocatorDirector();
+    virtual ~SwigDirector_ValidStateSamplerAllocatorDirector();
+    virtual ompl::base::ValidStateSamplerPtr Invoke(ompl::base::SpaceInformation const *arg0);
+
+    typedef void * (SWIGSTDCALL* SWIG_Callback0_t)(void *);
+    void swig_connect_director(SWIG_Callback0_t callbackInvoke);
+
+private:
+    SWIG_Callback0_t swig_callbackInvoke;
+    void swig_init_callbacks();
+};
+
 
 #endif

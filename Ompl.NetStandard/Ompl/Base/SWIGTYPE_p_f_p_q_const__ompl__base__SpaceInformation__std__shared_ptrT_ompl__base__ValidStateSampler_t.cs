@@ -8,22 +8,20 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Ompl.Geometric {
+namespace Ompl.Base {
 
-using Ompl.Base;
-
-public class SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t {
+public class SWIGTYPE_p_f_p_q_const__ompl__base__SpaceInformation__std__shared_ptrT_ompl__base__ValidStateSampler_t {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t(global::System.IntPtr cPtr, bool futureUse) {
+  internal SWIGTYPE_p_f_p_q_const__ompl__base__SpaceInformation__std__shared_ptrT_ompl__base__ValidStateSampler_t(global::System.IntPtr cPtr, bool futureUse) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  protected SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t() {
+  protected SWIGTYPE_p_f_p_q_const__ompl__base__SpaceInformation__std__shared_ptrT_ompl__base__ValidStateSampler_t() {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_f_p_q_const__ompl__base__SpaceInformation__std__shared_ptrT_ompl__base__ValidStateSampler_t obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 }

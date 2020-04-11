@@ -27,9 +27,16 @@
 // Handle namespace conflicts
 %rename("Base") ompl::base;
 
+%include "carrays.i"
+%array_functions(double, doubleArray);
+%array_functions(int, intArray);
+
 %include "std_string.i"
 %include "std_vector.i"
 %include "std_shared_ptr.i"
+
+%template(doubleVector) std::vector<double>;
+%template(intVector) std::vector<int>;
 
 // Pass std::exception up to C#
 %include "exception.i"

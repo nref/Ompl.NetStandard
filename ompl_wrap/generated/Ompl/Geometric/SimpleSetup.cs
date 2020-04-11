@@ -75,8 +75,9 @@ public class SimpleSetup : global::System.IDisposable {
     return ret;
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t getStateValidityChecker() {
-    SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t(ompl_geometricPINVOKE.SimpleSetup_getStateValidityChecker(swigCPtr), false);
+  public StateValidityChecker getStateValidityChecker() {
+    global::System.IntPtr cPtr = ompl_geometricPINVOKE.SimpleSetup_getStateValidityChecker(swigCPtr);
+    StateValidityChecker ret = (cPtr == global::System.IntPtr.Zero) ? null : new StateValidityChecker(cPtr, true);
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -144,8 +145,8 @@ public class SimpleSetup : global::System.IDisposable {
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setStateValidityChecker(SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t svc) {
-    ompl_geometricPINVOKE.SimpleSetup_setStateValidityChecker__SWIG_0(swigCPtr, SWIGTYPE_p_std__shared_ptrT_ompl__base__StateValidityChecker_t.getCPtr(svc));
+  public void setStateValidityChecker(StateValidityChecker svc) {
+    ompl_geometricPINVOKE.SimpleSetup_setStateValidityChecker__SWIG_0(swigCPtr, StateValidityChecker.getCPtr(svc));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -159,18 +160,18 @@ public class SimpleSetup : global::System.IDisposable {
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setStartAndGoalStates(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t start, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t goal, double threshold) {
-    ompl_geometricPINVOKE.SimpleSetup_setStartAndGoalStates__SWIG_0(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(start), SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(goal), threshold);
+  public void setStartAndGoalStates(ScopedStateStateSpace start, ScopedStateStateSpace goal, double threshold) {
+    ompl_geometricPINVOKE.SimpleSetup_setStartAndGoalStates__SWIG_0(swigCPtr, ScopedStateStateSpace.getCPtr(start), ScopedStateStateSpace.getCPtr(goal), threshold);
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setStartAndGoalStates(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t start, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t goal) {
-    ompl_geometricPINVOKE.SimpleSetup_setStartAndGoalStates__SWIG_1(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(start), SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(goal));
+  public void setStartAndGoalStates(ScopedStateStateSpace start, ScopedStateStateSpace goal) {
+    ompl_geometricPINVOKE.SimpleSetup_setStartAndGoalStates__SWIG_1(swigCPtr, ScopedStateStateSpace.getCPtr(start), ScopedStateStateSpace.getCPtr(goal));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void addStartState(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t state) {
-    ompl_geometricPINVOKE.SimpleSetup_addStartState(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(state));
+  public void addStartState(ScopedStateStateSpace state) {
+    ompl_geometricPINVOKE.SimpleSetup_addStartState(swigCPtr, ScopedStateStateSpace.getCPtr(state));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -179,18 +180,18 @@ public class SimpleSetup : global::System.IDisposable {
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setStartState(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t state) {
-    ompl_geometricPINVOKE.SimpleSetup_setStartState(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(state));
+  public void setStartState(ScopedStateStateSpace state) {
+    ompl_geometricPINVOKE.SimpleSetup_setStartState(swigCPtr, ScopedStateStateSpace.getCPtr(state));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setGoalState(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t goal, double threshold) {
-    ompl_geometricPINVOKE.SimpleSetup_setGoalState__SWIG_0(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(goal), threshold);
+  public void setGoalState(ScopedStateStateSpace goal, double threshold) {
+    ompl_geometricPINVOKE.SimpleSetup_setGoalState__SWIG_0(swigCPtr, ScopedStateStateSpace.getCPtr(goal), threshold);
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setGoalState(SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t goal) {
-    ompl_geometricPINVOKE.SimpleSetup_setGoalState__SWIG_1(swigCPtr, SWIGTYPE_p_ompl__base__ScopedStateT_ompl__base__StateSpace_t.getCPtr(goal));
+  public void setGoalState(ScopedStateStateSpace goal) {
+    ompl_geometricPINVOKE.SimpleSetup_setGoalState__SWIG_1(swigCPtr, ScopedStateStateSpace.getCPtr(goal));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 

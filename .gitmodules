@@ -1,0 +1,6 @@
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen
+[submodule "ompl"]
+	path = ompl
+	url = https://github.com/slater1/ompl

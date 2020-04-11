@@ -97,6 +97,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -127,6 +128,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,6 +157,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,6 +188,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -236,7 +240,7 @@
     <CustomBuild Include="ompl_geometric.i">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        echo swig -Wall -Wallkw -I../ompl/src --outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
         swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
       </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -281,6 +285,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="common.i" />
+    <None Include="std_function.i" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

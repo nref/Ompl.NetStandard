@@ -280,8 +280,8 @@ public class StateSpace : global::System.IDisposable {
     return ret;
   }
 
-  public virtual void computeSignature(SWIGTYPE_p_std__vectorT_int_t signature) {
-    ompl_basePINVOKE.StateSpace_computeSignature(swigCPtr, SWIGTYPE_p_std__vectorT_int_t.getCPtr(signature));
+  public virtual void computeSignature(intVector signature) {
+    ompl_basePINVOKE.StateSpace_computeSignature(swigCPtr, intVector.getCPtr(signature));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -428,13 +428,13 @@ public class StateSpace : global::System.IDisposable {
     return ret;
   }
 
-  public virtual void copyToReals(SWIGTYPE_p_std__vectorT_double_t reals, State source) {
-    ompl_basePINVOKE.StateSpace_copyToReals(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(reals), State.getCPtr(source));
+  public virtual void copyToReals(doubleVector reals, State source) {
+    ompl_basePINVOKE.StateSpace_copyToReals(swigCPtr, doubleVector.getCPtr(reals), State.getCPtr(source));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void copyFromReals(State destination, SWIGTYPE_p_std__vectorT_double_t reals) {
-    ompl_basePINVOKE.StateSpace_copyFromReals(swigCPtr, State.getCPtr(destination), SWIGTYPE_p_std__vectorT_double_t.getCPtr(reals));
+  public virtual void copyFromReals(State destination, doubleVector reals) {
+    ompl_basePINVOKE.StateSpace_copyFromReals(swigCPtr, State.getCPtr(destination), doubleVector.getCPtr(reals));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 

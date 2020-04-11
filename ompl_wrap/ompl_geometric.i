@@ -21,7 +21,7 @@ using Ompl.Base;
 // PathGeometric::print overrides ompl::base::Path::print
 // They both take an std::ostream references.
 // std::ostream gets mapped a separate C# type for each SWIG module it is referenced in.
-// In this case, Ompl.Base.SWIGTYPE_p_std__ostream and Ompl.Geometric.SWIGTYPE_p_std__ostream
+// In this case, Ompl.Base.SWIGTYPE_p_std__ostream conflicts with Ompl.Geometric.SWIGTYPE_p_std__ostream
 %ignore ompl::geometric::PathGeometric::print;
 
 %shared_ptr(ompl::geometric::PathGeometric);

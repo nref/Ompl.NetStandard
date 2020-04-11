@@ -146,13 +146,13 @@ public class RNG : global::System.IDisposable {
     return ret;
   }
 
-  public void uniformNormalVector(SWIGTYPE_p_std__vectorT_double_t v) {
-    ompl_geometricPINVOKE.RNG_uniformNormalVector(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(v));
+  public void uniformNormalVector(doubleVector v) {
+    ompl_geometricPINVOKE.RNG_uniformNormalVector(swigCPtr, doubleVector.getCPtr(v));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void uniformInBall(double r, SWIGTYPE_p_std__vectorT_double_t v) {
-    ompl_geometricPINVOKE.RNG_uniformInBall(swigCPtr, r, SWIGTYPE_p_std__vectorT_double_t.getCPtr(v));
+  public void uniformInBall(double r, doubleVector v) {
+    ompl_geometricPINVOKE.RNG_uniformInBall(swigCPtr, r, doubleVector.getCPtr(v));
     if (ompl_geometricPINVOKE.SWIGPendingException.Pending) throw ompl_geometricPINVOKE.SWIGPendingException.Retrieve();
   }
 

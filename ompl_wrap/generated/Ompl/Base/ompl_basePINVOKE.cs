@@ -193,6 +193,186 @@ class ompl_basePINVOKE {
   }
 
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_doubleArray___")]
+  public static extern global::System.IntPtr new_doubleArray(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_doubleArray___")]
+  public static extern void delete_doubleArray(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleArray_getitem___")]
+  public static extern double doubleArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleArray_setitem___")]
+  public static extern void doubleArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_intArray___")]
+  public static extern global::System.IntPtr new_intArray(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_intArray___")]
+  public static extern void delete_intArray(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intArray_getitem___")]
+  public static extern int intArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intArray_setitem___")]
+  public static extern void intArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Clear___")]
+  public static extern void doubleVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Add___")]
+  public static extern void doubleVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_size___")]
+  public static extern uint doubleVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_capacity___")]
+  public static extern uint doubleVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_reserve___")]
+  public static extern void doubleVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_doubleVector__SWIG_0___")]
+  public static extern global::System.IntPtr new_doubleVector__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_doubleVector__SWIG_1___")]
+  public static extern global::System.IntPtr new_doubleVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_doubleVector__SWIG_2___")]
+  public static extern global::System.IntPtr new_doubleVector__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_getitemcopy___")]
+  public static extern double doubleVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_getitem___")]
+  public static extern double doubleVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_setitem___")]
+  public static extern void doubleVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_AddRange___")]
+  public static extern void doubleVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_GetRange___")]
+  public static extern global::System.IntPtr doubleVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Insert___")]
+  public static extern void doubleVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_InsertRange___")]
+  public static extern void doubleVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_RemoveAt___")]
+  public static extern void doubleVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_RemoveRange___")]
+  public static extern void doubleVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Repeat___")]
+  public static extern global::System.IntPtr doubleVector_Repeat(double jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Reverse__SWIG_0___")]
+  public static extern void doubleVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Reverse__SWIG_1___")]
+  public static extern void doubleVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_SetRange___")]
+  public static extern void doubleVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Contains___")]
+  public static extern bool doubleVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_IndexOf___")]
+  public static extern int doubleVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_LastIndexOf___")]
+  public static extern int doubleVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Remove___")]
+  public static extern bool doubleVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_doubleVector___")]
+  public static extern void delete_doubleVector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Clear___")]
+  public static extern void intVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Add___")]
+  public static extern void intVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_size___")]
+  public static extern uint intVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_capacity___")]
+  public static extern uint intVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_reserve___")]
+  public static extern void intVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_intVector__SWIG_0___")]
+  public static extern global::System.IntPtr new_intVector__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_intVector__SWIG_1___")]
+  public static extern global::System.IntPtr new_intVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_intVector__SWIG_2___")]
+  public static extern global::System.IntPtr new_intVector__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_getitemcopy___")]
+  public static extern int intVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_getitem___")]
+  public static extern int intVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_setitem___")]
+  public static extern void intVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_AddRange___")]
+  public static extern void intVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_GetRange___")]
+  public static extern global::System.IntPtr intVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Insert___")]
+  public static extern void intVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_InsertRange___")]
+  public static extern void intVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_RemoveAt___")]
+  public static extern void intVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_RemoveRange___")]
+  public static extern void intVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Repeat___")]
+  public static extern global::System.IntPtr intVector_Repeat(int jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Reverse__SWIG_0___")]
+  public static extern void intVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Reverse__SWIG_1___")]
+  public static extern void intVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_SetRange___")]
+  public static extern void intVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Contains___")]
+  public static extern bool intVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_IndexOf___")]
+  public static extern int intVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_LastIndexOf___")]
+  public static extern int intVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intVector_Remove___")]
+  public static extern bool intVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_intVector___")]
+  public static extern void delete_intVector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_now___")]
   public static extern global::System.IntPtr now();
 
@@ -537,6 +717,66 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ValidStateSampler_director_connect___")]
   public static extern void ValidStateSampler_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, ValidStateSampler.SwigDelegateValidStateSampler_0 delegate0, ValidStateSampler.SwigDelegateValidStateSampler_1 delegate1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_UniformValidStateSampler___")]
+  public static extern global::System.IntPtr new_UniformValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_UniformValidStateSampler___")]
+  public static extern void delete_UniformValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_UniformValidStateSampler_sample___")]
+  public static extern bool UniformValidStateSampler_sample(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_UniformValidStateSampler_sampleNear___")]
+  public static extern bool UniformValidStateSampler_sampleNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_GaussianValidStateSampler___")]
+  public static extern global::System.IntPtr new_GaussianValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_GaussianValidStateSampler___")]
+  public static extern void delete_GaussianValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_GaussianValidStateSampler_sample___")]
+  public static extern bool GaussianValidStateSampler_sample(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_GaussianValidStateSampler_sampleNear___")]
+  public static extern bool GaussianValidStateSampler_sampleNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_GaussianValidStateSampler_getStdDev___")]
+  public static extern double GaussianValidStateSampler_getStdDev(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_GaussianValidStateSampler_setStdDev___")]
+  public static extern void GaussianValidStateSampler_setStdDev(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ObstacleBasedValidStateSampler___")]
+  public static extern global::System.IntPtr new_ObstacleBasedValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ObstacleBasedValidStateSampler___")]
+  public static extern void delete_ObstacleBasedValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ObstacleBasedValidStateSampler_sample___")]
+  public static extern bool ObstacleBasedValidStateSampler_sample(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ObstacleBasedValidStateSampler_sampleNear___")]
+  public static extern bool ObstacleBasedValidStateSampler_sampleNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_MaximizeClearanceValidStateSampler___")]
+  public static extern global::System.IntPtr new_MaximizeClearanceValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_MaximizeClearanceValidStateSampler___")]
+  public static extern void delete_MaximizeClearanceValidStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_sample___")]
+  public static extern bool MaximizeClearanceValidStateSampler_sample(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_sampleNear___")]
+  public static extern bool MaximizeClearanceValidStateSampler_sampleNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_setNrImproveAttempts___")]
+  public static extern void MaximizeClearanceValidStateSampler_setNrImproveAttempts(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_getNrImproveAttempts___")]
+  public static extern uint MaximizeClearanceValidStateSampler_getNrImproveAttempts(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_MotionValidator__SWIG_0___")]
   public static extern global::System.IntPtr new_MotionValidator__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -2158,11 +2398,206 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_MultiOptimizationObjective___")]
   public static extern void delete_MultiOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_StateCostIntegralObjective__SWIG_0___")]
+  public static extern global::System.IntPtr new_StateCostIntegralObjective__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_StateCostIntegralObjective__SWIG_1___")]
+  public static extern global::System.IntPtr new_StateCostIntegralObjective__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_stateCost___")]
+  public static extern global::System.IntPtr StateCostIntegralObjective_stateCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_motionCost___")]
+  public static extern global::System.IntPtr StateCostIntegralObjective_motionCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_isMotionCostInterpolationEnabled___")]
+  public static extern bool StateCostIntegralObjective_isMotionCostInterpolationEnabled(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_StateCostIntegralObjective___")]
+  public static extern void delete_StateCostIntegralObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_MaximizeMinClearanceObjective___")]
+  public static extern global::System.IntPtr new_MaximizeMinClearanceObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeMinClearanceObjective_stateCost___")]
+  public static extern global::System.IntPtr MaximizeMinClearanceObjective_stateCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeMinClearanceObjective_isCostBetterThan___")]
+  public static extern bool MaximizeMinClearanceObjective_isCostBetterThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeMinClearanceObjective_identityCost___")]
+  public static extern global::System.IntPtr MaximizeMinClearanceObjective_identityCost(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeMinClearanceObjective_infiniteCost___")]
+  public static extern global::System.IntPtr MaximizeMinClearanceObjective_infiniteCost(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_MaximizeMinClearanceObjective___")]
+  public static extern void delete_MaximizeMinClearanceObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_PathLengthOptimizationObjective___")]
+  public static extern global::System.IntPtr new_PathLengthOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PathLengthOptimizationObjective_stateCost___")]
+  public static extern global::System.IntPtr PathLengthOptimizationObjective_stateCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PathLengthOptimizationObjective_motionCost___")]
+  public static extern global::System.IntPtr PathLengthOptimizationObjective_motionCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PathLengthOptimizationObjective_motionCostHeuristic___")]
+  public static extern global::System.IntPtr PathLengthOptimizationObjective_motionCostHeuristic(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PathLengthOptimizationObjective_allocInformedStateSampler___")]
+  public static extern global::System.IntPtr PathLengthOptimizationObjective_allocInformedStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_PathLengthOptimizationObjective___")]
+  public static extern void delete_PathLengthOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ValidStateSamplerAllocatorDirector___")]
+  public static extern void delete_ValidStateSamplerAllocatorDirector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ValidStateSamplerAllocatorDirector_Invoke___")]
+  public static extern global::System.IntPtr ValidStateSamplerAllocatorDirector_Invoke(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ValidStateSamplerAllocatorDirector___")]
+  public static extern global::System.IntPtr new_ValidStateSamplerAllocatorDirector();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ValidStateSamplerAllocatorDirector_director_connect___")]
+  public static extern void ValidStateSamplerAllocatorDirector_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, ValidStateSamplerAllocatorDirector.SwigDelegateValidStateSamplerAllocatorDirector_0 delegate0);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new__function__SWIG_0___")]
+  public static extern global::System.IntPtr new__function__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ValidStateSamplerAllocator_Invoke___")]
+  public static extern global::System.IntPtr ValidStateSamplerAllocator_Invoke(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new__function__SWIG_1___")]
+  public static extern global::System.IntPtr new__function__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new__function__SWIG_2___")]
+  public static extern global::System.IntPtr new__function__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ValidStateSamplerAllocator___")]
+  public static extern void delete_ValidStateSamplerAllocator(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_0___")]
+  public static extern global::System.IntPtr new_ScopedStateStateSpace__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_1___")]
+  public static extern global::System.IntPtr new_ScopedStateStateSpace__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_2___")]
+  public static extern global::System.IntPtr new_ScopedStateStateSpace__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateStateSpace__SWIG_3___")]
+  public static extern global::System.IntPtr new_ScopedStateStateSpace__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ScopedStateStateSpace___")]
+  public static extern void delete_ScopedStateStateSpace(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_getSpace___")]
+  public static extern global::System.IntPtr ScopedStateStateSpace_getSpace(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_distance___")]
+  public static extern double ScopedStateStateSpace_distance(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_random___")]
+  public static extern void ScopedStateStateSpace_random(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_enforceBounds___")]
+  public static extern void ScopedStateStateSpace_enforceBounds(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_satisfiesBounds___")]
+  public static extern bool ScopedStateStateSpace_satisfiesBounds(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_reals___")]
+  public static extern global::System.IntPtr ScopedStateStateSpace_reals(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace__print__SWIG_0___")]
+  public static extern void ScopedStateStateSpace__print__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace__print__SWIG_1___")]
+  public static extern void ScopedStateStateSpace__print__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace___ref____SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateStateSpace___ref____SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace___deref____SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateStateSpace___deref____SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateStateSpace_get__SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateStateSpace_get__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_0___")]
+  public static extern global::System.IntPtr new_ScopedStateRealVectorStateSpace__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_1___")]
+  public static extern global::System.IntPtr new_ScopedStateRealVectorStateSpace__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_2___")]
+  public static extern global::System.IntPtr new_ScopedStateRealVectorStateSpace__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ScopedStateRealVectorStateSpace__SWIG_3___")]
+  public static extern global::System.IntPtr new_ScopedStateRealVectorStateSpace__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ScopedStateRealVectorStateSpace___")]
+  public static extern void delete_ScopedStateRealVectorStateSpace(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_getSpace___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace_getSpace(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_distance___")]
+  public static extern double ScopedStateRealVectorStateSpace_distance(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_random___")]
+  public static extern void ScopedStateRealVectorStateSpace_random(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_enforceBounds___")]
+  public static extern void ScopedStateRealVectorStateSpace_enforceBounds(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_satisfiesBounds___")]
+  public static extern bool ScopedStateRealVectorStateSpace_satisfiesBounds(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_reals___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace_reals(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace__print__SWIG_0___")]
+  public static extern void ScopedStateRealVectorStateSpace__print__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace__print__SWIG_1___")]
+  public static extern void ScopedStateRealVectorStateSpace__print__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace___ref____SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace___ref____SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace___deref____SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace___deref____SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_get__SWIG_0___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace_get__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_values_set___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace_values_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ScopedStateRealVectorStateSpace_values_get___")]
+  public static extern global::System.IntPtr ScopedStateRealVectorStateSpace_values_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_CompoundState_SWIGUpcast___")]
   public static extern global::System.IntPtr CompoundState_SWIGUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_AllValidStateValidityChecker_SWIGUpcast___")]
-  public static extern global::System.IntPtr AllValidStateValidityChecker_SWIGUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_AllValidStateValidityChecker_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr AllValidStateValidityChecker_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_UniformValidStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr UniformValidStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_GaussianValidStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr GaussianValidStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ObstacleBasedValidStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr ObstacleBasedValidStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr MaximizeClearanceValidStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_CompoundStateSampler_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr CompoundStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
@@ -2187,6 +2622,12 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MultiOptimizationObjective_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr MultiOptimizationObjective_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr StateCostIntegralObjective_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PathLengthOptimizationObjective_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr PathLengthOptimizationObjective_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }

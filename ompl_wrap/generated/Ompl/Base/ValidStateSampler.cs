@@ -12,10 +12,10 @@ namespace Ompl.Base {
 
 public class ValidStateSampler : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
+  private bool swigCMemOwnBase;
 
   internal ValidStateSampler(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -35,8 +35,8 @@ public class ValidStateSampler : global::System.IDisposable {
   protected virtual void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
           ompl_basePINVOKE.delete_ValidStateSampler(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
