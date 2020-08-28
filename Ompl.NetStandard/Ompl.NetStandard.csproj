@@ -1,9 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RunPostBuildEvent></RunPostBuildEvent>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Ompl.NetStandard.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +14,23 @@
     <None Remove="generated\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Condition="'$(Platform)|$(Configuration)' == 'x64|Debug'" Update="boost_serialization-vc142-mt-gd-x64-1_72.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Condition="'$(Platform)|$(Configuration)' == 'x64|Release'" Update="boost_serialization-vc142-mt-x64-1_72.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="echo rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;&#xD;&#xA;echo xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;&#xD;&#xA;echo copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)&#xD;&#xA;copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)" />
   </Target>
 
+  <ItemGroup>
+    <Content Include="$(ProjectDir)$(TargetName).props">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
 </Project>

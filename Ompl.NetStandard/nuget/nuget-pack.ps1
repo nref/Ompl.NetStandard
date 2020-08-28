@@ -1,0 +1,1 @@
+nuget pack nuspec/Ompl.NetStandard.x64.nuspec -OutputDirectory nupkg -Properties Configuration=Release

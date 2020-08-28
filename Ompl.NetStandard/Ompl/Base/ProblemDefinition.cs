@@ -48,6 +48,13 @@ public class ProblemDefinition : global::System.IDisposable {
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public ProblemDefinition c_clone() {
+    global::System.IntPtr cPtr = ompl_basePINVOKE.ProblemDefinition_c_clone(swigCPtr);
+    ProblemDefinition ret = (cPtr == global::System.IntPtr.Zero) ? null : new ProblemDefinition(cPtr, true);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public SpaceInformation getSpaceInformation() {
     global::System.IntPtr cPtr = ompl_basePINVOKE.ProblemDefinition_getSpaceInformation(swigCPtr);
     SpaceInformation ret = (cPtr == global::System.IntPtr.Zero) ? null : new SpaceInformation(cPtr, true);

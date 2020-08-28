@@ -193,186 +193,6 @@ class ompl_geometricPINVOKE {
   }
 
 
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_doubleArray___")]
-  public static extern global::System.IntPtr new_doubleArray(int jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_doubleArray___")]
-  public static extern void delete_doubleArray(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleArray_getitem___")]
-  public static extern double doubleArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleArray_setitem___")]
-  public static extern void doubleArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_intArray___")]
-  public static extern global::System.IntPtr new_intArray(int jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_intArray___")]
-  public static extern void delete_intArray(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intArray_getitem___")]
-  public static extern int intArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intArray_setitem___")]
-  public static extern void intArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Clear___")]
-  public static extern void doubleVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Add___")]
-  public static extern void doubleVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_size___")]
-  public static extern uint doubleVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_capacity___")]
-  public static extern uint doubleVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_reserve___")]
-  public static extern void doubleVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_doubleVector__SWIG_0___")]
-  public static extern global::System.IntPtr new_doubleVector__SWIG_0();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_doubleVector__SWIG_1___")]
-  public static extern global::System.IntPtr new_doubleVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_doubleVector__SWIG_2___")]
-  public static extern global::System.IntPtr new_doubleVector__SWIG_2(int jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_getitemcopy___")]
-  public static extern double doubleVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_getitem___")]
-  public static extern double doubleVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_setitem___")]
-  public static extern void doubleVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_AddRange___")]
-  public static extern void doubleVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_GetRange___")]
-  public static extern global::System.IntPtr doubleVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Insert___")]
-  public static extern void doubleVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_InsertRange___")]
-  public static extern void doubleVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_RemoveAt___")]
-  public static extern void doubleVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_RemoveRange___")]
-  public static extern void doubleVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Repeat___")]
-  public static extern global::System.IntPtr doubleVector_Repeat(double jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Reverse__SWIG_0___")]
-  public static extern void doubleVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Reverse__SWIG_1___")]
-  public static extern void doubleVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_SetRange___")]
-  public static extern void doubleVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Contains___")]
-  public static extern bool doubleVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_IndexOf___")]
-  public static extern int doubleVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_LastIndexOf___")]
-  public static extern int doubleVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_doubleVector_Remove___")]
-  public static extern bool doubleVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_doubleVector___")]
-  public static extern void delete_doubleVector(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Clear___")]
-  public static extern void intVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Add___")]
-  public static extern void intVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_size___")]
-  public static extern uint intVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_capacity___")]
-  public static extern uint intVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_reserve___")]
-  public static extern void intVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_intVector__SWIG_0___")]
-  public static extern global::System.IntPtr new_intVector__SWIG_0();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_intVector__SWIG_1___")]
-  public static extern global::System.IntPtr new_intVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_intVector__SWIG_2___")]
-  public static extern global::System.IntPtr new_intVector__SWIG_2(int jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_getitemcopy___")]
-  public static extern int intVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_getitem___")]
-  public static extern int intVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_setitem___")]
-  public static extern void intVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_AddRange___")]
-  public static extern void intVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_GetRange___")]
-  public static extern global::System.IntPtr intVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Insert___")]
-  public static extern void intVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_InsertRange___")]
-  public static extern void intVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_RemoveAt___")]
-  public static extern void intVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_RemoveRange___")]
-  public static extern void intVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Repeat___")]
-  public static extern global::System.IntPtr intVector_Repeat(int jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Reverse__SWIG_0___")]
-  public static extern void intVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Reverse__SWIG_1___")]
-  public static extern void intVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_SetRange___")]
-  public static extern void intVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Contains___")]
-  public static extern bool intVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_IndexOf___")]
-  public static extern int intVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_LastIndexOf___")]
-  public static extern int intVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_intVector_Remove___")]
-  public static extern bool intVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_intVector___")]
-  public static extern void delete_intVector(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_now___")]
   public static extern global::System.IntPtr now();
 
@@ -383,7 +203,7 @@ class ompl_geometricPINVOKE {
   public static extern double seconds__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_as_string___")]
-  public static extern string as_string(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr as_string(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_ProgressDisplay__SWIG_0___")]
   public static extern global::System.IntPtr new_ProgressDisplay__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -706,63 +526,6 @@ class ompl_geometricPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PathSimplifier_freeStates__SWIG_1___")]
   public static extern bool PathSimplifier_freeStates__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_KPIECE1___")]
-  public static extern global::System.IntPtr new_KPIECE1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_KPIECE1___")]
-  public static extern void delete_KPIECE1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_solve___")]
-  public static extern global::System.IntPtr KPIECE1_solve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_clear___")]
-  public static extern void KPIECE1_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setGoalBias___")]
-  public static extern void KPIECE1_setGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getGoalBias___")]
-  public static extern double KPIECE1_getGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setRange___")]
-  public static extern void KPIECE1_setRange(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getRange___")]
-  public static extern double KPIECE1_getRange(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setBorderFraction___")]
-  public static extern void KPIECE1_setBorderFraction(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getBorderFraction___")]
-  public static extern double KPIECE1_getBorderFraction(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setMinValidPathFraction___")]
-  public static extern void KPIECE1_setMinValidPathFraction(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getMinValidPathFraction___")]
-  public static extern double KPIECE1_getMinValidPathFraction(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setFailedExpansionCellScoreFactor___")]
-  public static extern void KPIECE1_setFailedExpansionCellScoreFactor(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getFailedExpansionCellScoreFactor___")]
-  public static extern double KPIECE1_getFailedExpansionCellScoreFactor(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setProjectionEvaluator__SWIG_0___")]
-  public static extern void KPIECE1_setProjectionEvaluator__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setProjectionEvaluator__SWIG_1___")]
-  public static extern void KPIECE1_setProjectionEvaluator__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getProjectionEvaluator___")]
-  public static extern global::System.IntPtr KPIECE1_getProjectionEvaluator(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setup___")]
-  public static extern void KPIECE1_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getPlannerData___")]
-  public static extern void KPIECE1_getPlannerData(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_SimpleSetup__SWIG_0___")]
   public static extern global::System.IntPtr new_SimpleSetup__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -892,11 +655,227 @@ class ompl_geometricPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_SimpleSetup_setup___")]
   public static extern void SimpleSetup_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_KPIECE1___")]
+  public static extern global::System.IntPtr new_KPIECE1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_KPIECE1___")]
+  public static extern void delete_KPIECE1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_solve___")]
+  public static extern global::System.IntPtr KPIECE1_solve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_clear___")]
+  public static extern void KPIECE1_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setGoalBias___")]
+  public static extern void KPIECE1_setGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getGoalBias___")]
+  public static extern double KPIECE1_getGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setRange___")]
+  public static extern void KPIECE1_setRange(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getRange___")]
+  public static extern double KPIECE1_getRange(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setBorderFraction___")]
+  public static extern void KPIECE1_setBorderFraction(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getBorderFraction___")]
+  public static extern double KPIECE1_getBorderFraction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setMinValidPathFraction___")]
+  public static extern void KPIECE1_setMinValidPathFraction(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getMinValidPathFraction___")]
+  public static extern double KPIECE1_getMinValidPathFraction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setFailedExpansionCellScoreFactor___")]
+  public static extern void KPIECE1_setFailedExpansionCellScoreFactor(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getFailedExpansionCellScoreFactor___")]
+  public static extern double KPIECE1_getFailedExpansionCellScoreFactor(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setProjectionEvaluator__SWIG_0___")]
+  public static extern void KPIECE1_setProjectionEvaluator__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setProjectionEvaluator__SWIG_1___")]
+  public static extern void KPIECE1_setProjectionEvaluator__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getProjectionEvaluator___")]
+  public static extern global::System.IntPtr KPIECE1_getProjectionEvaluator(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_setup___")]
+  public static extern void KPIECE1_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_getPlannerData___")]
+  public static extern void KPIECE1_getPlannerData(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_RRTConnect__SWIG_0___")]
+  public static extern global::System.IntPtr new_RRTConnect__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_RRTConnect__SWIG_1___")]
+  public static extern global::System.IntPtr new_RRTConnect__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_RRTConnect___")]
+  public static extern void delete_RRTConnect(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_getPlannerData___")]
+  public static extern void RRTConnect_getPlannerData(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_solve___")]
+  public static extern global::System.IntPtr RRTConnect_solve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_clear___")]
+  public static extern void RRTConnect_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_getIntermediateStates___")]
+  public static extern bool RRTConnect_getIntermediateStates(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_setIntermediateStates___")]
+  public static extern void RRTConnect_setIntermediateStates(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_setRange___")]
+  public static extern void RRTConnect_setRange(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_getRange___")]
+  public static extern double RRTConnect_getRange(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_setup___")]
+  public static extern void RRTConnect_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_RRTstar___")]
+  public static extern global::System.IntPtr new_RRTstar(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_RRTstar___")]
+  public static extern void delete_RRTstar(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getPlannerData___")]
+  public static extern void RRTstar_getPlannerData(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_solve___")]
+  public static extern global::System.IntPtr RRTstar_solve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_clear___")]
+  public static extern void RRTstar_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setup___")]
+  public static extern void RRTstar_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setGoalBias___")]
+  public static extern void RRTstar_setGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getGoalBias___")]
+  public static extern double RRTstar_getGoalBias(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setRange___")]
+  public static extern void RRTstar_setRange(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getRange___")]
+  public static extern double RRTstar_getRange(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setRewireFactor___")]
+  public static extern void RRTstar_setRewireFactor(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getRewireFactor___")]
+  public static extern double RRTstar_getRewireFactor(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setDelayCC___")]
+  public static extern void RRTstar_setDelayCC(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getDelayCC___")]
+  public static extern bool RRTstar_getDelayCC(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setTreePruning___")]
+  public static extern void RRTstar_setTreePruning(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getTreePruning___")]
+  public static extern bool RRTstar_getTreePruning(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setPruneThreshold___")]
+  public static extern void RRTstar_setPruneThreshold(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getPruneThreshold___")]
+  public static extern double RRTstar_getPruneThreshold(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setPrunedMeasure___")]
+  public static extern void RRTstar_setPrunedMeasure(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getPrunedMeasure___")]
+  public static extern bool RRTstar_getPrunedMeasure(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setInformedSampling___")]
+  public static extern void RRTstar_setInformedSampling(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getInformedSampling___")]
+  public static extern bool RRTstar_getInformedSampling(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setSampleRejection___")]
+  public static extern void RRTstar_setSampleRejection(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getSampleRejection___")]
+  public static extern bool RRTstar_getSampleRejection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setNewStateRejection___")]
+  public static extern void RRTstar_setNewStateRejection(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getNewStateRejection___")]
+  public static extern bool RRTstar_getNewStateRejection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setAdmissibleCostToCome___")]
+  public static extern void RRTstar_setAdmissibleCostToCome(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getAdmissibleCostToCome___")]
+  public static extern bool RRTstar_getAdmissibleCostToCome(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setOrderedSampling___")]
+  public static extern void RRTstar_setOrderedSampling(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getOrderedSampling___")]
+  public static extern bool RRTstar_getOrderedSampling(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setBatchSize___")]
+  public static extern void RRTstar_setBatchSize(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getBatchSize___")]
+  public static extern uint RRTstar_getBatchSize(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setFocusSearch___")]
+  public static extern void RRTstar_setFocusSearch(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getFocusSearch___")]
+  public static extern bool RRTstar_getFocusSearch(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setKNearest___")]
+  public static extern void RRTstar_setKNearest(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getKNearest___")]
+  public static extern bool RRTstar_getKNearest(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_setNumSamplingAttempts___")]
+  public static extern void RRTstar_setNumSamplingAttempts(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_getNumSamplingAttempts___")]
+  public static extern uint RRTstar_getNumSamplingAttempts(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_numIterations___")]
+  public static extern uint RRTstar_numIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_bestCost___")]
+  public static extern global::System.IntPtr RRTstar_bestCost(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PathGeometric_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr PathGeometric_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_KPIECE1_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr KPIECE1_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTConnect_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr RRTConnect_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr RRTstar_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }

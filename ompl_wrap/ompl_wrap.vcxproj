@@ -96,7 +96,7 @@
       <PreprocessorDefinitions>NDEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -105,7 +105,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -127,14 +127,14 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -156,14 +156,14 @@
       <PreprocessorDefinitions>_DEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -187,7 +187,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-v142-x64;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -196,7 +196,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-v142-$(Platform)\bin\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -211,28 +211,15 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <!-- <CustomBuild Include="common.i">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-        echo swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
-        swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
-      </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-        echo swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
-        swig -I../ompl/src -outdir generated\ompl -c++ -csharp -namespace Ompl %(Identity)
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl.base_wrap.cxx</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl.base_wrap.cxx</Outputs>
-    </CustomBuild> -->
     <CustomBuild Include="ompl_base.i">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
-        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+        echo swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+        swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
       </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport  %(Identity)
-        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
+        echo swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport  %(Identity)
+        swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Base -c++ -csharp -namespace Ompl.Base -dllimport ompl_wrap %(Identity)
       </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_base_wrap.cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_base_wrap.cxx</Outputs>
@@ -240,12 +227,12 @@
     <CustomBuild Include="ompl_geometric.i">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-        echo swig -Wall -Wallkw -I../ompl/src --outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
-        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        echo swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
       </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-        echo swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
-        swig -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        echo swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
+        swig -v -Wall -Wallkw -I../ompl/src -outdir generated\Ompl\Geometric -c++ -csharp -namespace Ompl.Geometric -dllimport ompl_wrap %(Identity)
       </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ompl_geometric_wrap.cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ompl_geometric_wrap.cxx</Outputs>
@@ -270,6 +257,7 @@
     <ClInclude Include="ompl_geometric_wrap.h" />
     <!-- <ClInclude Include="ompl_control_wrap.h" /> -->
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Determinism.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

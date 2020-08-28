@@ -219,27 +219,33 @@ public class doubleVector : global::System.IDisposable, global::System.Collectio
 
   public void Clear() {
     ompl_basePINVOKE.doubleVector_Clear(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(double x) {
     ompl_basePINVOKE.doubleVector_Add(swigCPtr, x);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
     uint ret = ompl_basePINVOKE.doubleVector_size(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
     uint ret = ompl_basePINVOKE.doubleVector_capacity(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
     ompl_basePINVOKE.doubleVector_reserve(swigCPtr, n);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public doubleVector() : this(ompl_basePINVOKE.new_doubleVector__SWIG_0(), true) {
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public doubleVector(doubleVector other) : this(ompl_basePINVOKE.new_doubleVector__SWIG_1(doubleVector.getCPtr(other)), true) {
@@ -308,6 +314,7 @@ public class doubleVector : global::System.IDisposable, global::System.Collectio
 
   public void Reverse() {
     ompl_basePINVOKE.doubleVector_Reverse__SWIG_0(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
@@ -322,21 +329,25 @@ public class doubleVector : global::System.IDisposable, global::System.Collectio
 
   public bool Contains(double value) {
     bool ret = ompl_basePINVOKE.doubleVector_Contains(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(double value) {
     int ret = ompl_basePINVOKE.doubleVector_IndexOf(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(double value) {
     int ret = ompl_basePINVOKE.doubleVector_LastIndexOf(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(double value) {
     bool ret = ompl_basePINVOKE.doubleVector_Remove(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

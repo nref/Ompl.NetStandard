@@ -14,6 +14,8 @@ using Ompl.Base;
 #include "ompl/geometric/PathSimplifier.h"
 #include "ompl/geometric/SimpleSetup.h"
 #include "ompl/geometric/planners/kpiece/KPIECE1.h"
+#include "ompl/geometric/planners/rrt/RRTConnect.h"
+#include "ompl/geometric/planners/rrt/RRTstar.h"
 
 %}
 
@@ -28,8 +30,12 @@ using Ompl.Base;
 %shared_ptr(ompl::geometric::PathSimplifier);
 %shared_ptr(ompl::geometric::SimpleSetup);
 %shared_ptr(ompl::geometric::KPIECE1);
+%shared_ptr(ompl::geometric::RRTConnect);
+%shared_ptr(ompl::geometric::RRTstar);
 
 %include "ompl/geometric/PathGeometric.h"
 %include "ompl/geometric/PathSimplifier.h"
-%include "ompl/geometric/planners/kpiece/KPIECE1.h"
 %include "ompl/geometric/SimpleSetup.h"
+%include "ompl/geometric/planners/kpiece/KPIECE1.h"
+%include "ompl/geometric/planners/rrt/RRTConnect.h"
+%include "ompl/geometric/planners/rrt/RRTstar.h"

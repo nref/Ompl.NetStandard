@@ -18,6 +18,7 @@
 // Ignore Eigen
 %ignore ompl::base::ProjectionMatrix;
 %ignore ompl::base::ProjectionEvaluator;
+%ignore ompl::base::SubspaceProjectionEvaluator;
 
 // Prevent Error CS0506 'CompoundStateSpace.allocSubspaceStateSampler(StateSpace)': 
 // cannot override inherited member 'StateSpace.allocSubspaceStateSampler(StateSpace)' 
@@ -26,17 +27,6 @@
 
 // Handle namespace conflicts
 %rename("Base") ompl::base;
-
-%include "carrays.i"
-%array_functions(double, doubleArray);
-%array_functions(int, intArray);
-
-%include "std_string.i"
-%include "std_vector.i"
-%include "std_shared_ptr.i"
-
-%template(doubleVector) std::vector<double>;
-%template(intVector) std::vector<int>;
 
 // Pass std::exception up to C#
 %include "exception.i"
@@ -56,7 +46,7 @@
 
 %include "ompl/datastructures/BinaryHeap.h"
 // Ignore this macro
-%define EIGEN_MAKE_ALIGNED_OPERATOR_NEW(x) 0
+%define EIGEN_MAKE_ALIGNED_OPERATOR_NEW /**/
 %include "ompl/datastructures/Grid.h"
 %include "ompl/datastructures/GridN.h"
 %include "ompl/datastructures/GridB.h"

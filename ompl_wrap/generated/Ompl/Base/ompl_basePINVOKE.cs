@@ -193,6 +193,135 @@ class ompl_basePINVOKE {
   }
 
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_now___")]
+  public static extern global::System.IntPtr now();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_seconds__SWIG_0___")]
+  public static extern global::System.IntPtr seconds__SWIG_0(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_seconds__SWIG_1___")]
+  public static extern double seconds__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_as_string___")]
+  public static extern global::System.IntPtr as_string(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProgressDisplay__SWIG_0___")]
+  public static extern global::System.IntPtr new_ProgressDisplay__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProgressDisplay__SWIG_1___")]
+  public static extern global::System.IntPtr new_ProgressDisplay__SWIG_1();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProgressDisplay_count___")]
+  public static extern uint ProgressDisplay_count(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ProgressDisplay___")]
+  public static extern void delete_ProgressDisplay(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProlateHyperspheroid___")]
+  public static extern global::System.IntPtr new_ProlateHyperspheroid(uint jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_setTransverseDiameter___")]
+  public static extern void ProlateHyperspheroid_setTransverseDiameter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_transform___")]
+  public static extern void ProlateHyperspheroid_transform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_isInPhs___")]
+  public static extern bool ProlateHyperspheroid_isInPhs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_isOnPhs___")]
+  public static extern bool ProlateHyperspheroid_isOnPhs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsDimension___")]
+  public static extern uint ProlateHyperspheroid_getPhsDimension(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsMeasure__SWIG_0___")]
+  public static extern double ProlateHyperspheroid_getPhsMeasure__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsMeasure__SWIG_1___")]
+  public static extern double ProlateHyperspheroid_getPhsMeasure__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getMinTransverseDiameter___")]
+  public static extern double ProlateHyperspheroid_getMinTransverseDiameter(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPathLength___")]
+  public static extern double ProlateHyperspheroid_getPathLength(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getDimension___")]
+  public static extern uint ProlateHyperspheroid_getDimension(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ProlateHyperspheroid___")]
+  public static extern void delete_ProlateHyperspheroid(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RNG__SWIG_0___")]
+  public static extern global::System.IntPtr new_RNG__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RNG__SWIG_1___")]
+  public static extern global::System.IntPtr new_RNG__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniform01___")]
+  public static extern double RNG_uniform01(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformReal___")]
+  public static extern double RNG_uniformReal(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformInt___")]
+  public static extern int RNG_uniformInt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformBool___")]
+  public static extern bool RNG_uniformBool(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_gaussian01___")]
+  public static extern double RNG_gaussian01(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_gaussian___")]
+  public static extern double RNG_gaussian(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalReal__SWIG_0___")]
+  public static extern double RNG_halfNormalReal__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalReal__SWIG_1___")]
+  public static extern double RNG_halfNormalReal__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalInt__SWIG_0___")]
+  public static extern int RNG_halfNormalInt__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalInt__SWIG_1___")]
+  public static extern int RNG_halfNormalInt__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_quaternion___")]
+  public static extern void RNG_quaternion(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_eulerRPY___")]
+  public static extern void RNG_eulerRPY(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_setSeed___")]
+  public static extern void RNG_setSeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_getSeed___")]
+  public static extern global::System.IntPtr RNG_getSeed();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_setLocalSeed___")]
+  public static extern void RNG_setLocalSeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_getLocalSeed___")]
+  public static extern global::System.IntPtr RNG_getLocalSeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformNormalVector___")]
+  public static extern void RNG_uniformNormalVector(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformInBall___")]
+  public static extern void RNG_uniformInBall(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformProlateHyperspheroidSurface___")]
+  public static extern void RNG_uniformProlateHyperspheroidSurface(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformProlateHyperspheroid___")]
+  public static extern void RNG_uniformProlateHyperspheroid(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_RNG___")]
+  public static extern void delete_RNG(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_doubleArray___")]
   public static extern global::System.IntPtr new_doubleArray(int jarg1);
 
@@ -205,6 +334,12 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleArray_setitem___")]
   public static extern void doubleArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleArray__cast___")]
+  public static extern global::System.IntPtr doubleArray__cast(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleArray_frompointer___")]
+  public static extern global::System.IntPtr doubleArray_frompointer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_intArray___")]
   public static extern global::System.IntPtr new_intArray(int jarg1);
 
@@ -216,6 +351,30 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intArray_setitem___")]
   public static extern void intArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intArray__cast___")]
+  public static extern global::System.IntPtr intArray__cast(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_intArray_frompointer___")]
+  public static extern global::System.IntPtr intArray_frompointer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_DoublePointer___")]
+  public static extern global::System.IntPtr new_DoublePointer();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_DoublePointer___")]
+  public static extern void delete_DoublePointer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DoublePointer_assign___")]
+  public static extern void DoublePointer_assign(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DoublePointer_value___")]
+  public static extern double DoublePointer_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DoublePointer__cast___")]
+  public static extern global::System.IntPtr DoublePointer__cast(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DoublePointer_frompointer___")]
+  public static extern global::System.IntPtr DoublePointer_frompointer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_doubleVector_Clear___")]
   public static extern void doubleVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -372,135 +531,6 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_intVector___")]
   public static extern void delete_intVector(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_now___")]
-  public static extern global::System.IntPtr now();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_seconds__SWIG_0___")]
-  public static extern global::System.IntPtr seconds__SWIG_0(double jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_seconds__SWIG_1___")]
-  public static extern double seconds__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_as_string___")]
-  public static extern string as_string(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProgressDisplay__SWIG_0___")]
-  public static extern global::System.IntPtr new_ProgressDisplay__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProgressDisplay__SWIG_1___")]
-  public static extern global::System.IntPtr new_ProgressDisplay__SWIG_1();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProgressDisplay_count___")]
-  public static extern uint ProgressDisplay_count(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ProgressDisplay___")]
-  public static extern void delete_ProgressDisplay(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProlateHyperspheroid___")]
-  public static extern global::System.IntPtr new_ProlateHyperspheroid(uint jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_setTransverseDiameter___")]
-  public static extern void ProlateHyperspheroid_setTransverseDiameter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_transform___")]
-  public static extern void ProlateHyperspheroid_transform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_isInPhs___")]
-  public static extern bool ProlateHyperspheroid_isInPhs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_isOnPhs___")]
-  public static extern bool ProlateHyperspheroid_isOnPhs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsDimension___")]
-  public static extern uint ProlateHyperspheroid_getPhsDimension(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsMeasure__SWIG_0___")]
-  public static extern double ProlateHyperspheroid_getPhsMeasure__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPhsMeasure__SWIG_1___")]
-  public static extern double ProlateHyperspheroid_getPhsMeasure__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getMinTransverseDiameter___")]
-  public static extern double ProlateHyperspheroid_getMinTransverseDiameter(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getPathLength___")]
-  public static extern double ProlateHyperspheroid_getPathLength(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProlateHyperspheroid_getDimension___")]
-  public static extern uint ProlateHyperspheroid_getDimension(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ProlateHyperspheroid___")]
-  public static extern void delete_ProlateHyperspheroid(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RNG__SWIG_0___")]
-  public static extern global::System.IntPtr new_RNG__SWIG_0();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RNG__SWIG_1___")]
-  public static extern global::System.IntPtr new_RNG__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniform01___")]
-  public static extern double RNG_uniform01(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformReal___")]
-  public static extern double RNG_uniformReal(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformInt___")]
-  public static extern int RNG_uniformInt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformBool___")]
-  public static extern bool RNG_uniformBool(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_gaussian01___")]
-  public static extern double RNG_gaussian01(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_gaussian___")]
-  public static extern double RNG_gaussian(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalReal__SWIG_0___")]
-  public static extern double RNG_halfNormalReal__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalReal__SWIG_1___")]
-  public static extern double RNG_halfNormalReal__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalInt__SWIG_0___")]
-  public static extern int RNG_halfNormalInt__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, double jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_halfNormalInt__SWIG_1___")]
-  public static extern int RNG_halfNormalInt__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_quaternion___")]
-  public static extern void RNG_quaternion(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_eulerRPY___")]
-  public static extern void RNG_eulerRPY(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_setSeed___")]
-  public static extern void RNG_setSeed(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_getSeed___")]
-  public static extern global::System.IntPtr RNG_getSeed();
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_setLocalSeed___")]
-  public static extern void RNG_setLocalSeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_getLocalSeed___")]
-  public static extern global::System.IntPtr RNG_getLocalSeed(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformNormalVector___")]
-  public static extern void RNG_uniformNormalVector(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformInBall___")]
-  public static extern void RNG_uniformInBall(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformProlateHyperspheroidSurface___")]
-  public static extern void RNG_uniformProlateHyperspheroidSurface(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RNG_uniformProlateHyperspheroid___")]
-  public static extern void RNG_uniformProlateHyperspheroid(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_RNG___")]
-  public static extern void delete_RNG(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_Cost__SWIG_0___")]
   public static extern global::System.IntPtr new_Cost__SWIG_0(double jarg1);
@@ -807,6 +837,18 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MotionValidator_director_connect___")]
   public static extern void MotionValidator_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, MotionValidator.SwigDelegateMotionValidator_0 delegate0, MotionValidator.SwigDelegateMotionValidator_1 delegate1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_DiscreteMotionValidator__SWIG_0___")]
+  public static extern global::System.IntPtr new_DiscreteMotionValidator__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_DiscreteMotionValidator___")]
+  public static extern void delete_DiscreteMotionValidator(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DiscreteMotionValidator_checkMotion__SWIG_0___")]
+  public static extern bool DiscreteMotionValidator_checkMotion__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DiscreteMotionValidator_checkMotion__SWIG_1___")]
+  public static extern bool DiscreteMotionValidator_checkMotion__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_PlannerDataVertex__SWIG_0___")]
   public static extern global::System.IntPtr new_PlannerDataVertex__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1180,6 +1222,9 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_ProblemDefinition___")]
   public static extern global::System.IntPtr new_ProblemDefinition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_ProblemDefinition_c_clone___")]
+  public static extern global::System.IntPtr ProblemDefinition_c_clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ProblemDefinition___")]
   public static extern void delete_ProblemDefinition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -1492,15 +1537,6 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_Planner_printSettings___")]
   public static extern void Planner_printSettings(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SubspaceProjectionEvaluator_setup___")]
-  public static extern void SubspaceProjectionEvaluator_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SubspaceProjectionEvaluator_getDimension___")]
-  public static extern uint SubspaceProjectionEvaluator_getDimension(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_SubspaceProjectionEvaluator___")]
-  public static extern void delete_SubspaceProjectionEvaluator(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_StateSampler___")]
   public static extern void delete_StateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -1545,6 +1581,150 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SubspaceStateSampler_sampleGaussian___")]
   public static extern void SubspaceStateSampler_sampleGaussian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_DeterministicSequence___")]
+  public static extern void delete_DeterministicSequence(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicSequence_sample___")]
+  public static extern global::System.IntPtr DeterministicSequence_sample(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicSequence_dimensions__get___")]
+  public static extern uint DeterministicSequence_dimensions__get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_HaltonSequence1D__SWIG_0___")]
+  public static extern global::System.IntPtr new_HaltonSequence1D__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_HaltonSequence1D__SWIG_1___")]
+  public static extern global::System.IntPtr new_HaltonSequence1D__SWIG_1(uint jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_HaltonSequence1D_setBase___")]
+  public static extern void HaltonSequence1D_setBase(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_HaltonSequence1D_sample___")]
+  public static extern double HaltonSequence1D_sample(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_HaltonSequence1D___")]
+  public static extern void delete_HaltonSequence1D(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_HaltonSequence__SWIG_0___")]
+  public static extern global::System.IntPtr new_HaltonSequence__SWIG_0(uint jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_HaltonSequence__SWIG_1___")]
+  public static extern global::System.IntPtr new_HaltonSequence__SWIG_1(uint jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_HaltonSequence_sample___")]
+  public static extern global::System.IntPtr HaltonSequence_sample(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_HaltonSequence___")]
+  public static extern void delete_HaltonSequence(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_PrecomputedSequence__SWIG_0___")]
+  public static extern global::System.IntPtr new_PrecomputedSequence__SWIG_0(string jarg1, uint jarg2, bool jarg3, uint jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_PrecomputedSequence__SWIG_1___")]
+  public static extern global::System.IntPtr new_PrecomputedSequence__SWIG_1(string jarg1, uint jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_PrecomputedSequence__SWIG_2___")]
+  public static extern global::System.IntPtr new_PrecomputedSequence__SWIG_2(string jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PrecomputedSequence_sample___")]
+  public static extern global::System.IntPtr PrecomputedSequence_sample(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_PrecomputedSequence___")]
+  public static extern void delete_PrecomputedSequence(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_DeterministicStateSampler__SWIG_0___")]
+  public static extern global::System.IntPtr new_DeterministicStateSampler__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_DeterministicStateSampler__SWIG_1___")]
+  public static extern global::System.IntPtr new_DeterministicStateSampler__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_DeterministicStateSampler__SWIG_2___")]
+  public static extern global::System.IntPtr new_DeterministicStateSampler__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_DeterministicStateSampler___")]
+  public static extern void delete_DeterministicStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicStateSampler_sampleUniform___")]
+  public static extern void DeterministicStateSampler_sampleUniform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicStateSampler_sampleUniformNear___")]
+  public static extern void DeterministicStateSampler_sampleUniformNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicStateSampler_sampleGaussian___")]
+  public static extern void DeterministicStateSampler_sampleGaussian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SO2DeterministicStateSampler__SWIG_0___")]
+  public static extern global::System.IntPtr new_SO2DeterministicStateSampler__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SO2DeterministicStateSampler__SWIG_1___")]
+  public static extern global::System.IntPtr new_SO2DeterministicStateSampler__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SO2DeterministicStateSampler__SWIG_2___")]
+  public static extern global::System.IntPtr new_SO2DeterministicStateSampler__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SO2DeterministicStateSampler_sampleUniform___")]
+  public static extern void SO2DeterministicStateSampler_sampleUniform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SO2DeterministicStateSampler_sampleUniformNear___")]
+  public static extern void SO2DeterministicStateSampler_sampleUniformNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SO2DeterministicStateSampler_sampleGaussian___")]
+  public static extern void SO2DeterministicStateSampler_sampleGaussian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_SO2DeterministicStateSampler___")]
+  public static extern void delete_SO2DeterministicStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RealVectorDeterministicStateSampler__SWIG_0___")]
+  public static extern global::System.IntPtr new_RealVectorDeterministicStateSampler__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RealVectorDeterministicStateSampler__SWIG_1___")]
+  public static extern global::System.IntPtr new_RealVectorDeterministicStateSampler__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RealVectorDeterministicStateSampler__SWIG_2___")]
+  public static extern global::System.IntPtr new_RealVectorDeterministicStateSampler__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_RealVectorDeterministicStateSampler__SWIG_3___")]
+  public static extern global::System.IntPtr new_RealVectorDeterministicStateSampler__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RealVectorDeterministicStateSampler_sampleUniform___")]
+  public static extern void RealVectorDeterministicStateSampler_sampleUniform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RealVectorDeterministicStateSampler_sampleUniformNear___")]
+  public static extern void RealVectorDeterministicStateSampler_sampleUniformNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RealVectorDeterministicStateSampler_sampleGaussian___")]
+  public static extern void RealVectorDeterministicStateSampler_sampleGaussian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_RealVectorDeterministicStateSampler___")]
+  public static extern void delete_RealVectorDeterministicStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SE2DeterministicStateSampler__SWIG_0___")]
+  public static extern global::System.IntPtr new_SE2DeterministicStateSampler__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SE2DeterministicStateSampler__SWIG_1___")]
+  public static extern global::System.IntPtr new_SE2DeterministicStateSampler__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SE2DeterministicStateSampler__SWIG_2___")]
+  public static extern global::System.IntPtr new_SE2DeterministicStateSampler__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3, bool jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SE2DeterministicStateSampler__SWIG_3___")]
+  public static extern global::System.IntPtr new_SE2DeterministicStateSampler__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_SE2DeterministicStateSampler__SWIG_4___")]
+  public static extern global::System.IntPtr new_SE2DeterministicStateSampler__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SE2DeterministicStateSampler_sampleUniform___")]
+  public static extern void SE2DeterministicStateSampler_sampleUniform(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SE2DeterministicStateSampler_sampleUniformNear___")]
+  public static extern void SE2DeterministicStateSampler_sampleUniformNear(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SE2DeterministicStateSampler_sampleGaussian___")]
+  public static extern void SE2DeterministicStateSampler_sampleGaussian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_SE2DeterministicStateSampler___")]
+  public static extern void delete_SE2DeterministicStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_InformedSampler___")]
   public static extern void delete_InformedSampler(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -2452,6 +2632,18 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_PathLengthOptimizationObjective___")]
   public static extern void delete_PathLengthOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_Determinism_setDeterministicStateSamplerAllocator___")]
+  public static extern void Determinism_setDeterministicStateSamplerAllocator(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_Determinism_allocHalton___")]
+  public static extern global::System.IntPtr Determinism_allocHalton(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_Determinism___")]
+  public static extern global::System.IntPtr new_Determinism();
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_Determinism___")]
+  public static extern void delete_Determinism(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_ValidStateSamplerAllocatorDirector___")]
   public static extern void delete_ValidStateSamplerAllocatorDirector(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -2599,11 +2791,32 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_MaximizeClearanceValidStateSampler_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr MaximizeClearanceValidStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DiscreteMotionValidator_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr DiscreteMotionValidator_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_CompoundStateSampler_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr CompoundStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SubspaceStateSampler_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr SubspaceStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_HaltonSequence_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr HaltonSequence_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_PrecomputedSequence_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr PrecomputedSequence_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_DeterministicStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr DeterministicStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SO2DeterministicStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr SO2DeterministicStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_RealVectorDeterministicStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr RealVectorDeterministicStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SE2DeterministicStateSampler_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr SE2DeterministicStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_InformedStateSampler_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr InformedStateSampler_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);

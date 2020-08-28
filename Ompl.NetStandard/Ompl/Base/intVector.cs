@@ -219,27 +219,33 @@ public class intVector : global::System.IDisposable, global::System.Collections.
 
   public void Clear() {
     ompl_basePINVOKE.intVector_Clear(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(int x) {
     ompl_basePINVOKE.intVector_Add(swigCPtr, x);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
     uint ret = ompl_basePINVOKE.intVector_size(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
     uint ret = ompl_basePINVOKE.intVector_capacity(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
     ompl_basePINVOKE.intVector_reserve(swigCPtr, n);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public intVector() : this(ompl_basePINVOKE.new_intVector__SWIG_0(), true) {
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public intVector(intVector other) : this(ompl_basePINVOKE.new_intVector__SWIG_1(intVector.getCPtr(other)), true) {
@@ -308,6 +314,7 @@ public class intVector : global::System.IDisposable, global::System.Collections.
 
   public void Reverse() {
     ompl_basePINVOKE.intVector_Reverse__SWIG_0(swigCPtr);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
@@ -322,21 +329,25 @@ public class intVector : global::System.IDisposable, global::System.Collections.
 
   public bool Contains(int value) {
     bool ret = ompl_basePINVOKE.intVector_Contains(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(int value) {
     int ret = ompl_basePINVOKE.intVector_IndexOf(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(int value) {
     int ret = ompl_basePINVOKE.intVector_LastIndexOf(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(int value) {
     bool ret = ompl_basePINVOKE.intVector_Remove(swigCPtr, value);
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -11,44 +11,6 @@
 namespace Ompl.Base {
 
 public class ompl_base {
-  public static SWIGTYPE_p_double new_doubleArray(int nelements) {
-    global::System.IntPtr cPtr = ompl_basePINVOKE.new_doubleArray(nelements);
-    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
-    return ret;
-  }
-
-  public static void delete_doubleArray(SWIGTYPE_p_double ary) {
-    ompl_basePINVOKE.delete_doubleArray(SWIGTYPE_p_double.getCPtr(ary));
-  }
-
-  public static double doubleArray_getitem(SWIGTYPE_p_double ary, int index) {
-    double ret = ompl_basePINVOKE.doubleArray_getitem(SWIGTYPE_p_double.getCPtr(ary), index);
-    return ret;
-  }
-
-  public static void doubleArray_setitem(SWIGTYPE_p_double ary, int index, double value) {
-    ompl_basePINVOKE.doubleArray_setitem(SWIGTYPE_p_double.getCPtr(ary), index, value);
-  }
-
-  public static SWIGTYPE_p_int new_intArray(int nelements) {
-    global::System.IntPtr cPtr = ompl_basePINVOKE.new_intArray(nelements);
-    SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
-    return ret;
-  }
-
-  public static void delete_intArray(SWIGTYPE_p_int ary) {
-    ompl_basePINVOKE.delete_intArray(SWIGTYPE_p_int.getCPtr(ary));
-  }
-
-  public static int intArray_getitem(SWIGTYPE_p_int ary, int index) {
-    int ret = ompl_basePINVOKE.intArray_getitem(SWIGTYPE_p_int.getCPtr(ary), index);
-    return ret;
-  }
-
-  public static void intArray_setitem(SWIGTYPE_p_int ary, int index, int value) {
-    ompl_basePINVOKE.intArray_setitem(SWIGTYPE_p_int.getCPtr(ary), index, value);
-  }
-
   public static SWIGTYPE_p_std__chrono__system_clock__time_point now() {
     SWIGTYPE_p_std__chrono__system_clock__time_point ret = new SWIGTYPE_p_std__chrono__system_clock__time_point(ompl_basePINVOKE.now(), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
@@ -67,8 +29,8 @@ public class ompl_base {
     return ret;
   }
 
-  public static string as_string(SWIGTYPE_p_std__chrono__system_clock__time_point p) {
-    string ret = ompl_basePINVOKE.as_string(SWIGTYPE_p_std__chrono__system_clock__time_point.getCPtr(p));
+  public static SWIGTYPE_p_std__string as_string(SWIGTYPE_p_std__chrono__system_clock__time_point p) {
+    SWIGTYPE_p_std__string ret = new SWIGTYPE_p_std__string(ompl_basePINVOKE.as_string(SWIGTYPE_p_std__chrono__system_clock__time_point.getCPtr(p)), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

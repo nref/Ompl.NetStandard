@@ -19,6 +19,9 @@
     <ClInclude Include="ompl_base_wrap.h">
       <Filter>generated_cxx</Filter>
     </ClInclude>
+    <ClInclude Include="Determinism.h">
+      <Filter>swig</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ompl_geometric.i">
