@@ -30,26 +30,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -96,7 +96,7 @@
       <PreprocessorDefinitions>NDEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\lib\boost_1_72_0;..\ompl\src;..\ompl\build-vs143-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -105,7 +105,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -127,14 +127,14 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\lib\boost_1_72_0;..\ompl\src;..\ompl\build-vs143-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -156,14 +156,14 @@
       <PreprocessorDefinitions>_DEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\lib\boost_1_72_0;..\ompl\src;..\ompl\build-vs143-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\boost\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\boost\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -187,7 +187,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;OMPLWRAP_EXPORTS;_WINDOWS;_USRDLL;;_CRT_SECURE_NO_WARNINGS;BOOST_ALL_NO_LIB;BOOST_PROGRAM_OPTIONS_DYN_LINK;BOOST_TEST_DYN_LINK;BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\boost;..\ompl\src;..\ompl\build-vs142-x64\src;..\eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\lib\boost_1_72_0;..\ompl\src;..\ompl\build-vs143-x64\src;..\eigen</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -196,7 +196,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>..\ompl\build-vs142-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>

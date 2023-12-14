@@ -103,6 +103,10 @@
 %shared_ptr(ompl::base::RealVectorStateSampler);
 %shared_ptr(ompl::base::RealVectorBounds);
 
+// https://github.com/swig/swig/issues/2309
+%rename("assign_to") ompl::base::StateValidityChecker::operator=;
+%rename("equal_to") ompl::base::StateValidityChecker::operator==;
+
 %include "ompl/base/Cost.h"
 %include "ompl/base/GenericParam.h"
 %include "ompl/base/GoalTypes.h"

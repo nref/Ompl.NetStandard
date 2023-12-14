@@ -3,4 +3,5 @@
 	url = https://gitlab.com/libeigen/eigen
 [submodule "ompl"]
 	path = ompl
-	url = https://github.com/slater1/ompl
+  url = https://github.com/nref/ompl
+  branch = release/1.6.0

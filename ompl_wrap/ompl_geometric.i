@@ -14,6 +14,7 @@ using Ompl.Base;
 #include "ompl/geometric/PathSimplifier.h"
 #include "ompl/geometric/SimpleSetup.h"
 #include "ompl/geometric/planners/kpiece/KPIECE1.h"
+#include "ompl/geometric/planners/kpiece/BKPIECE1.h"
 #include "ompl/geometric/planners/rrt/RRTConnect.h"
 #include "ompl/geometric/planners/rrt/RRTstar.h"
 
@@ -26,10 +27,12 @@ using Ompl.Base;
 // In this case, Ompl.Base.SWIGTYPE_p_std__ostream conflicts with Ompl.Geometric.SWIGTYPE_p_std__ostream
 %ignore ompl::geometric::PathGeometric::print;
 
+%shared_ptr(ompl::base::SpaceInformation);
 %shared_ptr(ompl::geometric::PathGeometric);
 %shared_ptr(ompl::geometric::PathSimplifier);
 %shared_ptr(ompl::geometric::SimpleSetup);
 %shared_ptr(ompl::geometric::KPIECE1);
+%shared_ptr(ompl::geometric::BKPIECE1);
 %shared_ptr(ompl::geometric::RRTConnect);
 %shared_ptr(ompl::geometric::RRTstar);
 
@@ -37,5 +40,6 @@ using Ompl.Base;
 %include "ompl/geometric/PathSimplifier.h"
 %include "ompl/geometric/SimpleSetup.h"
 %include "ompl/geometric/planners/kpiece/KPIECE1.h"
+%include "ompl/geometric/planners/kpiece/BKPIECE1.h"
 %include "ompl/geometric/planners/rrt/RRTConnect.h"
 %include "ompl/geometric/planners/rrt/RRTstar.h"

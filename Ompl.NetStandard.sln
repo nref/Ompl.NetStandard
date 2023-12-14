@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ompl.NetStandard", "Ompl.NetStandard\Ompl.NetStandard.csproj", "{4744005F-9F75-4AFC-B8A2-F03ADEF1A161}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ompl.NetStandard.UnitTests"
 		{4744005F-9F75-4AFC-B8A2-F03ADEF1A161} = {4744005F-9F75-4AFC-B8A2-F03ADEF1A161}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ompl", "ompl\build-vs142-x64\src\ompl\ompl.vcxproj", "{ED82D84E-099A-3A5D-90B3-EF5D1633EC2D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ompl", "ompl\build-vs143-x64\src\ompl\ompl.vcxproj", "{ED82D84E-099A-3A5D-90B3-EF5D1633EC2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++", "C++", "{A9F566E5-AB22-476A-835D-72144F94247F}"
 EndProject
