@@ -52,8 +52,8 @@ git submodule init
 git submodule update
 
 # Build dependencies
-#./buildtools/build-Eigen.ps1 ./eigen
-#./buildtools/build-OMPL.ps1 ./ompl
+./buildtools/build-Eigen.ps1 ./eigen
+./buildtools/build-OMPL.ps1 ./ompl
 
 # Build solutions
 . ./buildtools/Configure-Build.ps1
@@ -66,7 +66,8 @@ popd
 Remove-Item -Path "Ompl.NetStandard\Ompl" -Recurse -Force -ErrorAction SilentlyContinue 
 New-Item -Path "Ompl.NetStandard\Ompl" -ItemType Directory -Force
 xcopy /E /Y ompl_wrap\generated\* Ompl.NetStandard\Ompl
-copy ompl_wrap\bin\x64\$configuration\ompl_wrap.dll Ompl.NetStandard\bin\x64\$configuration\netstandard2.0
+New-Item -Path "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0" -ItemType Directory -Force
+copy "ompl_wrap\bin\x64\$configuration\ompl_wrap.dll" "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0"
 
 dotnet build --configuration=$configuration Ompl.NetStandard.sln
 
