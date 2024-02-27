@@ -9,9 +9,17 @@ Currently wrapped OMPL version is OMPL 1.6.0.
 # How to build
 
 ```
-git clone https://github.com/nref/Ompl.NetStandard
-cd Ompl.NetStandard
-pwsh make.ps1
+> git clone https://github.com/nref/Ompl.NetStandard
+> cd Ompl.NetStandard
+
+# Verify and potentially modify Visual Studio configuration
+> ./buildtools/Configure-Build.ps1
+Build configuration:
+
+Visual Studio path: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build
+CMake generator: Visual Studio 17 2022
+...
+> pwsh make.ps1
 ```
 
 # Example:

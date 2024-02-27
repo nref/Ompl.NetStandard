@@ -30,6 +30,8 @@ $repoRoot = $repoRoot -replace '\\', '/'
 
 Write-Host "Build configuration:" -ForegroundColor Yellow
 Write-Host
+Write-Host "Visual Studio path: $vc" -ForegroundColor Green
+Write-Host "CMake generator: $cmakeGenerator" -ForegroundColor Green
 Write-Host "Path to CMake: $cmake" -ForegroundColor Green
 Write-Host "Path to MSBuild: $msbuild" -ForegroundColor Green
 Write-Host "Repo root: $repoRoot" -ForegroundColor Green
