@@ -86,6 +86,16 @@
     <OutDir>bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
+  <Target Name="CustomClean" AfterTargets="Clean">
+    <Message Text="Performing custom clean operations..." />
+    <RemoveDir Directories="$(ProjectDir)generated" />
+  </Target>
+  <Target Name="CustomPreBuildEvent" BeforeTargets="PreBuildEvent">
+    <Exec Command="pwsh -Command &quot;New-Item -Path '$(ProjectDir)generated' -ItemType Directory -Force" />
+    <Exec Command="pwsh -Command &quot;New-Item -Path '$(ProjectDir)generated\Ompl' -ItemType Directory -Force" />
+    <Exec Command="pwsh -Command &quot;New-Item -Path '$(ProjectDir)generated\Ompl\Base' -ItemType Directory -Force" />
+    <Exec Command="pwsh -Command &quot;New-Item -Path '$(ProjectDir)generated\Ompl\Geometric' -ItemType Directory -Force" />
+  </Target>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -107,17 +117,6 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_program_options-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_serialization-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_filesystem-vc142-mt-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_system-vc142-mt-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>
-        echo rmdir /S /Q $(ProjectDir)generated
-        rmdir /S /Q $(ProjectDir)generated
-        mkdir generated
-        mkdir generated\Ompl
-        mkdir generated\Ompl\Base
-        mkdir generated\Ompl\Geometric
-        mkdir generated\Ompl\Control
-      </Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -136,17 +135,6 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>
-        echo rmdir /S /Q $(ProjectDir)generated
-        rmdir /S /Q $(ProjectDir)generated
-        mkdir generated
-        mkdir generated\Ompl
-        mkdir generated\Ompl\Base
-        mkdir generated\Ompl\Geometric
-        mkdir generated\Ompl\Control
-      </Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -165,17 +153,6 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_program_options-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_serialization-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_filesystem-vc142-mt-gd-x64-1_72.lib;C:\lib\boost_1_72_0\lib64-msvc-14.2\boost_system-vc142-mt-gd-x64-1_72.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>
-        echo rmdir /S /Q $(ProjectDir)generated
-        rmdir /S /Q $(ProjectDir)generated
-        mkdir generated
-        mkdir generated\Ompl
-        mkdir generated\Ompl\Base
-        mkdir generated\Ompl\Geometric
-        mkdir generated\Ompl\Control
-      </Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -198,17 +175,6 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>..\ompl\build-vs143-$(Platform)\src\ompl\$(Configuration)\ompl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PreBuildEvent>
-      <Command>
-        echo rmdir /S /Q $(ProjectDir)generated
-        rmdir /S /Q $(ProjectDir)generated
-        mkdir generated
-        mkdir generated\Ompl
-        mkdir generated\Ompl\Base
-        mkdir generated\Ompl\Geometric
-        mkdir generated\Ompl\Control
-      </Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="ompl_base.i">

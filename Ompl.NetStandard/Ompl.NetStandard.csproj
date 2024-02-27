@@ -17,12 +17,6 @@
     </None>
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="echo rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;&#xD;&#xA;echo xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;&#xD;&#xA;echo copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)&#xD;&#xA;copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)" />
-     <!-- Build is flaky, maybe file copy isn't finished? Give chance to complete -->
-    <Exec Command="pwsh -Comman 'Start-Sleep -s 1'"/>
-  </Target>
-
   <ItemGroup>
     <Content Include="$(ProjectDir)$(TargetName).props">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
