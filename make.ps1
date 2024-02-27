@@ -41,7 +41,7 @@ if (-not (Test-Path $boostDir)) {
     }
     echo "Extracting boost..."
     Start-Process -wait $boostExe -ArgumentList "/SILENT", "/DIR=$boostDir"
-    #rm $boostExe
+    rm $boostExe
 }
 
 # Download submodules e.g. Eigen, OMPL
