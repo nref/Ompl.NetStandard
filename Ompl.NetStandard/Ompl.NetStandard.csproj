@@ -3,16 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RunPostBuildEvent></RunPostBuildEvent>
-    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Platforms>x64;x86</Platforms>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Ompl.NetStandard.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="generated\**" />
-    <EmbeddedResource Remove="generated\**" />
-    <None Remove="generated\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Condition="'$(Platform)|$(Configuration)' == 'x64|Debug'" Update="boost_serialization-vc142-mt-gd-x64-1_72.dll">
@@ -25,6 +19,8 @@
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="echo rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;rmdir /S /Q $(ProjectDir)Ompl&#xD;&#xA;&#xD;&#xA;echo xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;xcopy /E /Y $(ProjectDir)..\ompl_wrap\generated\* $(ProjectDir)&#xD;&#xA;&#xD;&#xA;echo copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)&#xD;&#xA;copy $(ProjectDir)..\ompl_wrap\bin\$(Platform)\$(Configuration)\ompl_wrap.dll $(OutDir)" />
+     <!-- Build is flaky, maybe file copy isn't finished? Give chance to complete -->
+    <Exec Command="pwsh -Comman 'Start-Sleep -s 1'"/>
   </Target>
 
   <ItemGroup>

@@ -2,21 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Ompl.NetStandard.x64</id>
-    <version>2.0.3</version>
+    <version>2.1.0</version>
     <title>Ompl.NetStandard (x64)</title>
     <authors>Doug Slater</authors>
     <owners>Doug Slater</owners>
     <license type="file">LICENSE</license>
-    <projectUrl>https://github.com/slater1/Ompl.NetStandard</projectUrl>
+    <projectUrl>https://github.com/nref/Ompl.NetStandard</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A wrapper of the Open Motion Planning Library for .NET Standard 2.0 (x64)</description>
     <summary>A wrapper of the Open Motion Planning Library for .NET Standard 2.0 (x64)</summary>
     <releaseNotes>Initial release for .NET Standard 2.0 (x64)</releaseNotes>
     <copyright>Copyright 2020 Doug Slater</copyright>
     <tags>Motion Trajectory Planning Robotics</tags>
-    <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
-    <!-- https://github.com/NuGet/Home/issues/6873 -->
-    <!-- <readme>readme.md</readme> -->
+    <readme>readme.md</readme>
     <dependencies>
       <group targetFramework="netstandard2.0" >
       </group>
@@ -30,6 +28,9 @@
   
   <files>
     <file src="..\..\..\LICENSE" target="LICENSE" />
+    <!-- <file src="..\..\..\README.md" target="README.md" /> -->
+    <file src="..\md\Ompl.NetStandard.x64.md" target="README.md"/>
+
     <file src="..\..\bin\x64\Release\netstandard2.0\ompl_wrap.dll" target="build" />
     <file src="..\..\bin\x64\Release\netstandard2.0\Ompl.NetStandard.props" target="build\Ompl.NetStandard.x64.props" />
     <file src="..\..\bin\x64\Release\netstandard2.0\boost_serialization-vc142-mt-x64-1_72.dll" target="build\boost_serialization-vc142-mt-x64-1_72.dll" />
@@ -40,7 +41,6 @@
 
     <file src="..\..\bin\x64\Release\netstandard2.0\Ompl.NetStandard.dll" target="ref\netstandard2.0" />
     
-    <file src="..\md\Ompl.NetStandard.x64.md" target="readme.md"/>
   </files>
 
 </package>

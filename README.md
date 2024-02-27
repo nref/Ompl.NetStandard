@@ -7,7 +7,15 @@ https://github.com/ompl/ompl
 Current version is today's tip of HEAD: 
 https://github.com/ompl/ompl/commit/c94d586f7f39dc9df9e174357932985b69a86788
 
-Example:
+# How to build
+
+```
+git clone https://github.com/nref/Ompl.NetStandard
+cd Ompl.NetStandard
+pwsh make.ps1
+```
+
+# Example:
 ```cs
 var space = new Base.RealVectorStateSpace(3);
 var bounds = new Base.RealVectorBounds(3);
