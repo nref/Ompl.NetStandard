@@ -1,3 +1,5 @@
+$configuration="Release"
+
 # Install scoop if it does not exist
 $haveScoop = Get-Command scoop -ErrorAction SilentlyContinue
 
@@ -28,6 +30,7 @@ Install-WithScoop -ExecuTableName "git.exe" -PackageName "git"
 Install-WithScoop -ExecuTableName "wget.exe" -PackageName "wget"
 Install-WithScoop -ExecuTableName "cmake.exe" -PackageName "cmake"
 Install-WithScoop -ExecuTableName "nuget.exe" -PackageName "nuget"
+Install-WithScoop -ExecuTableName "swig.exe" -PackageName "swig"
 
 # Download and extract Boost
 $boostExe = "boost_1_72_0-msvc-14.2-64.exe"
@@ -49,13 +52,24 @@ git submodule init
 git submodule update
 
 # Build dependencies
-./buildtools/Configure-Build.ps1
 ./buildtools/build-Eigen.ps1 ./eigen
 ./buildtools/build-OMPL.ps1 ./ompl
 
 # Build solutions
-Invoke-MSBuild Release ompl_wrap.sln $True
-dotnet build --configuration=Release Ompl.NetStandard.sln
+. ./buildtools/Configure-Build.ps1
+. ./buildtools/Start-MSBuild.ps1
+pushd ompl_wrap
+Start-MSBuild $configuration ompl_wrap.sln $True
+popd
+
+# Copy generated files
+Remove-Item -Path "Ompl.NetStandard\Ompl" -Recurse -Force -ErrorAction SilentlyContinue 
+New-Item -Path "Ompl.NetStandard\Ompl" -ItemType Directory -Force
+xcopy /E /Y ompl_wrap\generated\* Ompl.NetStandard\Ompl
+New-Item -Path "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0" -ItemType Directory -Force
+copy "ompl_wrap\bin\x64\$configuration\ompl_wrap.dll" "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0"
+
+dotnet build --configuration=$configuration Ompl.NetStandard.sln
 
 # Generate NuGet Package
 pushd Ompl.NetStandard/nuget

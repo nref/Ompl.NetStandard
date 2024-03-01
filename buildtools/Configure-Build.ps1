@@ -3,7 +3,6 @@ param (
 )
 
 # Update these lines for other versions of Visual Studio
-#$vc = "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Auxiliary/Build"
 $vc = "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build"
 $cmakeGenerator = "Visual Studio 17 2022"
 

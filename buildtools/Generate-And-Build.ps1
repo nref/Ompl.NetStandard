@@ -19,8 +19,8 @@ function Generate-And-Build {
   Echo-Iex "$cmake -G `"$cmakeGenerator`" $cmakeOptions -S .."
 
   if ($build) {
-    . $PsScriptRoot/Invoke-MSBuild.ps1
-    Invoke-MSBuild $configuration $solution $parallelTargets
+    . $PsScriptRoot/Start-MSBuild.ps1
+    Start-MSBuild $configuration $solution $parallelTargets
   }
 
   # Clean up
