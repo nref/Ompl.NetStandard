@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Ompl.NetStandard.UnitTests
 {
-    public partial class SimpleSetupTests
+  public partial class SimpleSetupTests
     {
         [SetUp]
         public void Setup()

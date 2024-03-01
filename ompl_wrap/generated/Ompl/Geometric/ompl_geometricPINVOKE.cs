@@ -919,6 +919,78 @@ class ompl_geometricPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_bestCost___")]
   public static extern global::System.IntPtr RRTstar_bestCost(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRM__SWIG_0___")]
+  public static extern global::System.IntPtr new_PRM__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRM__SWIG_1___")]
+  public static extern global::System.IntPtr new_PRM__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRM__SWIG_2___")]
+  public static extern global::System.IntPtr new_PRM__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRM__SWIG_3___")]
+  public static extern global::System.IntPtr new_PRM__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_PRM___")]
+  public static extern void delete_PRM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_setProblemDefinition___")]
+  public static extern void PRM_setProblemDefinition(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_setDefaultConnectionStrategy___")]
+  public static extern void PRM_setDefaultConnectionStrategy(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_setMaxNearestNeighbors___")]
+  public static extern void PRM_setMaxNearestNeighbors(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_getMaxNearestNeighbors___")]
+  public static extern uint PRM_getMaxNearestNeighbors(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_getPlannerData___")]
+  public static extern void PRM_getPlannerData(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_constructRoadmap___")]
+  public static extern void PRM_constructRoadmap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_growRoadmap__SWIG_0___")]
+  public static extern void PRM_growRoadmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_growRoadmap__SWIG_1___")]
+  public static extern void PRM_growRoadmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_expandRoadmap__SWIG_0___")]
+  public static extern void PRM_expandRoadmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_expandRoadmap__SWIG_1___")]
+  public static extern void PRM_expandRoadmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_solve___")]
+  public static extern global::System.IntPtr PRM_solve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_clearQuery___")]
+  public static extern void PRM_clearQuery(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_clear___")]
+  public static extern void PRM_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_setup___")]
+  public static extern void PRM_setup(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_milestoneCount___")]
+  public static extern uint PRM_milestoneCount(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_edgeCount___")]
+  public static extern uint PRM_edgeCount(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRMstar__SWIG_0___")]
+  public static extern global::System.IntPtr new_PRMstar__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_new_PRMstar__SWIG_1___")]
+  public static extern global::System.IntPtr new_PRMstar__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_delete_PRMstar___")]
+  public static extern void delete_PRMstar(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PathGeometric_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr PathGeometric_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -933,6 +1005,12 @@ class ompl_geometricPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_RRTstar_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr RRTstar_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRM_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr PRM_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfGeometric_PRMstar_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr PRMstar_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }

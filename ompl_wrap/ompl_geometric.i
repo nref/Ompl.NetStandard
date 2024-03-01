@@ -17,6 +17,8 @@ using Ompl.Base;
 #include "ompl/geometric/planners/kpiece/BKPIECE1.h"
 #include "ompl/geometric/planners/rrt/RRTConnect.h"
 #include "ompl/geometric/planners/rrt/RRTstar.h"
+#include "ompl/geometric/planners/prm/PRM.h"
+#include "ompl/geometric/planners/prm/PRMstar.h"
 
 %}
 
@@ -27,6 +29,21 @@ using Ompl.Base;
 // In this case, Ompl.Base.SWIGTYPE_p_std__ostream conflicts with Ompl.Geometric.SWIGTYPE_p_std__ostream
 %ignore ompl::geometric::PathGeometric::print;
 
+// PRM.h Ignore boost aliases
+%ignore ompl::geometric::PRM::vertex_state_t;
+%ignore ompl::geometric::PRM::vertex_total_connection_attempts_t;
+%ignore ompl::geometric::PRM::vertex_successful_connection_attempts_t;
+%ignore ompl::geometric::PRM::Graph;
+%ignore ompl::geometric::PRM::Vertex;
+%ignore ompl::geometric::PRM::Edge;
+%ignore ompl::geometric::PRM::RoadmapNeighbors;
+%ignore ompl::geometric::PRM::ConnectionFilter;
+%ignore ompl::geometric::PRM::ConnectionStrategy;
+%ignore ompl::geometric::PRM::setConnectionStrategy;
+%ignore ompl::geometric::PRM::setConnectionFilter;
+%ignore ompl::geometric::PRM::getRoadmap;
+%ignore ompl::geometric::PRM::getNearestNeighbors;
+
 %shared_ptr(ompl::base::SpaceInformation);
 %shared_ptr(ompl::geometric::PathGeometric);
 %shared_ptr(ompl::geometric::PathSimplifier);
@@ -35,6 +52,8 @@ using Ompl.Base;
 %shared_ptr(ompl::geometric::BKPIECE1);
 %shared_ptr(ompl::geometric::RRTConnect);
 %shared_ptr(ompl::geometric::RRTstar);
+%shared_ptr(ompl::geometric::PRM);
+%shared_ptr(ompl::geometric::PRMstar);
 
 %include "ompl/geometric/PathGeometric.h"
 %include "ompl/geometric/PathSimplifier.h"
@@ -43,3 +62,5 @@ using Ompl.Base;
 %include "ompl/geometric/planners/kpiece/BKPIECE1.h"
 %include "ompl/geometric/planners/rrt/RRTConnect.h"
 %include "ompl/geometric/planners/rrt/RRTstar.h"
+%include "ompl/geometric/planners/prm/PRM.h"
+%include "ompl/geometric/planners/prm/PRMstar.h"

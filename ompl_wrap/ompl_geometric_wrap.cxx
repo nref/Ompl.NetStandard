@@ -491,6 +491,8 @@ SWIGINTERN void SWIG_CSharpException(int code, const char *msg) {
 #include "ompl/geometric/planners/kpiece/BKPIECE1.h"
 #include "ompl/geometric/planners/rrt/RRTConnect.h"
 #include "ompl/geometric/planners/rrt/RRTstar.h"
+#include "ompl/geometric/planners/prm/PRM.h"
+#include "ompl/geometric/planners/prm/PRMstar.h"
 
 
 
@@ -6342,6 +6344,562 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_RRTstar_bestCost___(void * j
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRM__SWIG_0___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  bool arg2 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::geometric::PRM *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      result = (ompl::geometric::PRM *)new ompl::geometric::PRM((ompl::base::SpaceInformationPtr const &)*arg1,arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRM >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRM__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::geometric::PRM *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::geometric::PRM *)new ompl::geometric::PRM((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRM >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRM__SWIG_2___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  ompl::base::PlannerData *arg1 = 0 ;
+  bool arg2 ;
+  ompl::geometric::PRM *result = 0 ;
+  
+  
+  arg1 = (ompl::base::PlannerData *)(((std::shared_ptr< const ompl::base::PlannerData > *)jarg1) ? ((std::shared_ptr< const ompl::base::PlannerData > *)jarg1)->get() : 0);
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerData const & reference is null", 0);
+    return 0;
+  } 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      result = (ompl::geometric::PRM *)new ompl::geometric::PRM((ompl::base::PlannerData const &)*arg1,arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRM >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRM__SWIG_3___(void * jarg1) {
+  void * jresult ;
+  ompl::base::PlannerData *arg1 = 0 ;
+  ompl::geometric::PRM *result = 0 ;
+  
+  
+  arg1 = (ompl::base::PlannerData *)(((std::shared_ptr< const ompl::base::PlannerData > *)jarg1) ? ((std::shared_ptr< const ompl::base::PlannerData > *)jarg1)->get() : 0);
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerData const & reference is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (ompl::geometric::PRM *)new ompl::geometric::PRM((ompl::base::PlannerData const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRM >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_delete_PRM___(void * jarg1) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_setProblemDefinition___(void * jarg1, void * jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::ProblemDefinitionPtr *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  ompl::base::ProblemDefinitionPtr tempnull2 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = jarg2 ? (ompl::base::ProblemDefinitionPtr *)jarg2 : &tempnull2; 
+  {
+    try {
+      (arg1)->setProblemDefinition((ompl::base::ProblemDefinitionPtr const &)*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_setDefaultConnectionStrategy___(void * jarg1) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (arg1)->setDefaultConnectionStrategy();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_setMaxNearestNeighbors___(void * jarg1, unsigned int jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  unsigned int arg2 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (unsigned int)jarg2; 
+  {
+    try {
+      (arg1)->setMaxNearestNeighbors(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfGeometric_PRM_getMaxNearestNeighbors___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM const > *smartarg1 = 0 ;
+  unsigned int result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (unsigned int)((ompl::geometric::PRM const *)arg1)->getMaxNearestNeighbors();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = (unsigned int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_getPlannerData___(void * jarg1, void * jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::PlannerData *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM const > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (ompl::base::PlannerData *)(((std::shared_ptr<  ompl::base::PlannerData > *)jarg2) ? ((std::shared_ptr<  ompl::base::PlannerData > *)jarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerData & reference is null", 0);
+    return ;
+  } 
+  {
+    try {
+      ((ompl::geometric::PRM const *)arg1)->getPlannerData(*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_constructRoadmap___(void * jarg1, void * jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::PlannerTerminationCondition *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (ompl::base::PlannerTerminationCondition *)(((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2) ? ((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerTerminationCondition const & reference is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->constructRoadmap((ompl::base::PlannerTerminationCondition const &)*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_growRoadmap__SWIG_0___(void * jarg1, double jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  double arg2 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (double)jarg2; 
+  {
+    try {
+      (arg1)->growRoadmap(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_growRoadmap__SWIG_1___(void * jarg1, void * jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::PlannerTerminationCondition *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (ompl::base::PlannerTerminationCondition *)(((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2) ? ((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerTerminationCondition const & reference is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->growRoadmap((ompl::base::PlannerTerminationCondition const &)*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_expandRoadmap__SWIG_0___(void * jarg1, double jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  double arg2 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (double)jarg2; 
+  {
+    try {
+      (arg1)->expandRoadmap(arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_expandRoadmap__SWIG_1___(void * jarg1, void * jarg2) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::PlannerTerminationCondition *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (ompl::base::PlannerTerminationCondition *)(((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2) ? ((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerTerminationCondition const & reference is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->expandRoadmap((ompl::base::PlannerTerminationCondition const &)*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_PRM_solve___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  ompl::base::PlannerTerminationCondition *arg2 = 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  ompl::base::PlannerStatus result;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  arg2 = (ompl::base::PlannerTerminationCondition *)(((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2) ? ((std::shared_ptr< const ompl::base::PlannerTerminationCondition > *)jarg2)->get() : 0);
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerTerminationCondition const & reference is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (arg1)->solve((ompl::base::PlannerTerminationCondition const &)*arg2);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = new std::shared_ptr<  ompl::base::PlannerStatus >(new ompl::base::PlannerStatus(result)); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_clearQuery___(void * jarg1) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (arg1)->clearQuery();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_clear___(void * jarg1) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (arg1)->clear();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_PRM_setup___(void * jarg1) {
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (arg1)->setup();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfGeometric_PRM_milestoneCount___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM const > *smartarg1 = 0 ;
+  unsigned long result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (unsigned long)((ompl::geometric::PRM const *)arg1)->milestoneCount();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_OmplfGeometric_PRM_edgeCount___(void * jarg1) {
+  unsigned int jresult ;
+  ompl::geometric::PRM *arg1 = (ompl::geometric::PRM *) 0 ;
+  std::shared_ptr< ompl::geometric::PRM const > *smartarg1 = 0 ;
+  unsigned long result;
+  
+  
+  smartarg1 = (std::shared_ptr< const ompl::geometric::PRM > *)jarg1;
+  arg1 = (ompl::geometric::PRM *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      result = (unsigned long)((ompl::geometric::PRM const *)arg1)->edgeCount();
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRMstar__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  ompl::base::SpaceInformationPtr *arg1 = 0 ;
+  ompl::base::SpaceInformationPtr tempnull1 ;
+  ompl::geometric::PRMstar *result = 0 ;
+  
+  arg1 = jarg1 ? (ompl::base::SpaceInformationPtr *)jarg1 : &tempnull1; 
+  {
+    try {
+      result = (ompl::geometric::PRMstar *)new ompl::geometric::PRMstar((ompl::base::SpaceInformationPtr const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRMstar >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_OmplfGeometric_new_PRMstar__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  ompl::base::PlannerData *arg1 = 0 ;
+  ompl::geometric::PRMstar *result = 0 ;
+  
+  
+  arg1 = (ompl::base::PlannerData *)(((std::shared_ptr< const ompl::base::PlannerData > *)jarg1) ? ((std::shared_ptr< const ompl::base::PlannerData > *)jarg1)->get() : 0);
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "ompl::base::PlannerData const & reference is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (ompl::geometric::PRMstar *)new ompl::geometric::PRMstar((ompl::base::PlannerData const &)*arg1);
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    }
+  }
+  
+  jresult = result ? new std::shared_ptr<  ompl::geometric::PRMstar >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_OmplfGeometric_delete_PRMstar___(void * jarg1) {
+  ompl::geometric::PRMstar *arg1 = (ompl::geometric::PRMstar *) 0 ;
+  std::shared_ptr< ompl::geometric::PRMstar > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  ompl::geometric::PRMstar > *)jarg1;
+  arg1 = (ompl::geometric::PRMstar *)(smartarg1 ? smartarg1->get() : 0); 
+  {
+    try {
+      (void)arg1; delete smartarg1;
+    } catch (const std::exception& e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    }
+  }
+}
+
+
 SWIGEXPORT std::shared_ptr< ompl::base::Path > * SWIGSTDCALL CSharp_OmplfGeometric_PathGeometric_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::geometric::PathGeometric > *jarg1) {
     return jarg1 ? new std::shared_ptr< ompl::base::Path >(*jarg1) : 0;
 }
@@ -6360,6 +6918,14 @@ SWIGEXPORT std::shared_ptr< ompl::base::Planner > * SWIGSTDCALL CSharp_OmplfGeom
 
 SWIGEXPORT std::shared_ptr< ompl::base::Planner > * SWIGSTDCALL CSharp_OmplfGeometric_RRTstar_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::geometric::RRTstar > *jarg1) {
     return jarg1 ? new std::shared_ptr< ompl::base::Planner >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::base::Planner > * SWIGSTDCALL CSharp_OmplfGeometric_PRM_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::geometric::PRM > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::base::Planner >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< ompl::geometric::PRM > * SWIGSTDCALL CSharp_OmplfGeometric_PRMstar_SWIGSmartPtrUpcast___(std::shared_ptr< ompl::geometric::PRMstar > *jarg1) {
+    return jarg1 ? new std::shared_ptr< ompl::geometric::PRM >(*jarg1) : 0;
 }
 
 #ifdef __cplusplus
