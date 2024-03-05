@@ -20,6 +20,8 @@
 %feature("director") ompl::base::MotionValidator;
 %feature("director") ompl::base::ValidStateSampler;
 %feature("director") ompl::base::StateValidityChecker;
+%feature("director") ompl::base::StateCostIntegralObjective;
+%feature("director") ompl::base::OptimizationObjective;
 
 %{
 

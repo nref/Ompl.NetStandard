@@ -65,7 +65,7 @@ popd
 # Copy generated files
 Remove-Item -Path "Ompl.NetStandard\Ompl" -Recurse -Force -ErrorAction SilentlyContinue 
 New-Item -Path "Ompl.NetStandard\Ompl" -ItemType Directory -Force
-xcopy /E /Y ompl_wrap\generated\* Ompl.NetStandard\Ompl
+xcopy /E /Y ompl_wrap\generated\* Ompl.NetStandard\
 New-Item -Path "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0" -ItemType Directory -Force
 copy "ompl_wrap\bin\x64\$configuration\ompl_wrap.dll" "Ompl.NetStandard\bin\x64\$configuration\netstandard2.0"
 

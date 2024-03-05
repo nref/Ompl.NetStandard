@@ -44,6 +44,11 @@ public class OptimizationObjective : global::System.IDisposable {
     }
   }
 
+  public OptimizationObjective(SpaceInformation si) : this(ompl_basePINVOKE.new_OptimizationObjective(SpaceInformation.getCPtr(si)), true) {
+    if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
   public string getDescription() {
     string ret = ompl_basePINVOKE.OptimizationObjective_getDescription(swigCPtr);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
@@ -51,7 +56,7 @@ public class OptimizationObjective : global::System.IDisposable {
   }
 
   public virtual bool isSatisfied(Cost c) {
-    bool ret = ompl_basePINVOKE.OptimizationObjective_isSatisfied(swigCPtr, Cost.getCPtr(c));
+    bool ret = (SwigDerivedClassHasMethod("isSatisfied", swigMethodTypes0) ? ompl_basePINVOKE.OptimizationObjective_isSatisfiedSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(c)) : ompl_basePINVOKE.OptimizationObjective_isSatisfied(swigCPtr, Cost.getCPtr(c)));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -68,25 +73,25 @@ public class OptimizationObjective : global::System.IDisposable {
   }
 
   public virtual bool isCostBetterThan(Cost c1, Cost c2) {
-    bool ret = ompl_basePINVOKE.OptimizationObjective_isCostBetterThan(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2));
+    bool ret = (SwigDerivedClassHasMethod("isCostBetterThan", swigMethodTypes1) ? ompl_basePINVOKE.OptimizationObjective_isCostBetterThanSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)) : ompl_basePINVOKE.OptimizationObjective_isCostBetterThan(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isCostEquivalentTo(Cost c1, Cost c2) {
-    bool ret = ompl_basePINVOKE.OptimizationObjective_isCostEquivalentTo(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2));
+    bool ret = (SwigDerivedClassHasMethod("isCostEquivalentTo", swigMethodTypes2) ? ompl_basePINVOKE.OptimizationObjective_isCostEquivalentToSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)) : ompl_basePINVOKE.OptimizationObjective_isCostEquivalentTo(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isFinite(Cost cost) {
-    bool ret = ompl_basePINVOKE.OptimizationObjective_isFinite(swigCPtr, Cost.getCPtr(cost));
+    bool ret = (SwigDerivedClassHasMethod("isFinite", swigMethodTypes3) ? ompl_basePINVOKE.OptimizationObjective_isFiniteSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(cost)) : ompl_basePINVOKE.OptimizationObjective_isFinite(swigCPtr, Cost.getCPtr(cost)));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost betterCost(Cost c1, Cost c2) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_betterCost(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("betterCost", swigMethodTypes4) ? ompl_basePINVOKE.OptimizationObjective_betterCostSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)) : ompl_basePINVOKE.OptimizationObjective_betterCost(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2))), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -104,43 +109,43 @@ public class OptimizationObjective : global::System.IDisposable {
   }
 
   public virtual Cost combineCosts(Cost c1, Cost c2) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_combineCosts(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("combineCosts", swigMethodTypes7) ? ompl_basePINVOKE.OptimizationObjective_combineCostsSwigExplicitOptimizationObjective(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2)) : ompl_basePINVOKE.OptimizationObjective_combineCosts(swigCPtr, Cost.getCPtr(c1), Cost.getCPtr(c2))), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost identityCost() {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_identityCost(swigCPtr), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("identityCost", swigMethodTypes8) ? ompl_basePINVOKE.OptimizationObjective_identityCostSwigExplicitOptimizationObjective(swigCPtr) : ompl_basePINVOKE.OptimizationObjective_identityCost(swigCPtr)), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost infiniteCost() {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_infiniteCost(swigCPtr), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("infiniteCost", swigMethodTypes9) ? ompl_basePINVOKE.OptimizationObjective_infiniteCostSwigExplicitOptimizationObjective(swigCPtr) : ompl_basePINVOKE.OptimizationObjective_infiniteCost(swigCPtr)), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost initialCost(State s) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_initialCost(swigCPtr, State.getCPtr(s)), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("initialCost", swigMethodTypes10) ? ompl_basePINVOKE.OptimizationObjective_initialCostSwigExplicitOptimizationObjective(swigCPtr, State.getCPtr(s)) : ompl_basePINVOKE.OptimizationObjective_initialCost(swigCPtr, State.getCPtr(s))), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost terminalCost(State s) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_terminalCost(swigCPtr, State.getCPtr(s)), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("terminalCost", swigMethodTypes11) ? ompl_basePINVOKE.OptimizationObjective_terminalCostSwigExplicitOptimizationObjective(swigCPtr, State.getCPtr(s)) : ompl_basePINVOKE.OptimizationObjective_terminalCost(swigCPtr, State.getCPtr(s))), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool isSymmetric() {
-    bool ret = ompl_basePINVOKE.OptimizationObjective_isSymmetric(swigCPtr);
+    bool ret = (SwigDerivedClassHasMethod("isSymmetric", swigMethodTypes12) ? ompl_basePINVOKE.OptimizationObjective_isSymmetricSwigExplicitOptimizationObjective(swigCPtr) : ompl_basePINVOKE.OptimizationObjective_isSymmetric(swigCPtr));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Cost averageStateCost(uint numStates) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_averageStateCost(swigCPtr, numStates), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("averageStateCost", swigMethodTypes13) ? ompl_basePINVOKE.OptimizationObjective_averageStateCostSwigExplicitOptimizationObjective(swigCPtr, numStates) : ompl_basePINVOKE.OptimizationObjective_averageStateCost(swigCPtr, numStates)), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -163,7 +168,7 @@ public class OptimizationObjective : global::System.IDisposable {
   }
 
   public virtual Cost motionCostHeuristic(State s1, State s2) {
-    Cost ret = new Cost(ompl_basePINVOKE.OptimizationObjective_motionCostHeuristic(swigCPtr, State.getCPtr(s1), State.getCPtr(s2)), true);
+    Cost ret = new Cost((SwigDerivedClassHasMethod("motionCostHeuristic", swigMethodTypes14) ? ompl_basePINVOKE.OptimizationObjective_motionCostHeuristicSwigExplicitOptimizationObjective(swigCPtr, State.getCPtr(s1), State.getCPtr(s2)) : ompl_basePINVOKE.OptimizationObjective_motionCostHeuristic(swigCPtr, State.getCPtr(s1), State.getCPtr(s2))), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -176,16 +181,209 @@ public class OptimizationObjective : global::System.IDisposable {
   }
 
   public virtual SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t allocInformedStateSampler(ProblemDefinition probDefn, uint maxNumberCalls) {
-    SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t(ompl_basePINVOKE.OptimizationObjective_allocInformedStateSampler(swigCPtr, ProblemDefinition.getCPtr(probDefn), maxNumberCalls), true);
+    SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t ret = new SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t((SwigDerivedClassHasMethod("allocInformedStateSampler", swigMethodTypes15) ? ompl_basePINVOKE.OptimizationObjective_allocInformedStateSamplerSwigExplicitOptimizationObjective(swigCPtr, ProblemDefinition.getCPtr(probDefn), maxNumberCalls) : ompl_basePINVOKE.OptimizationObjective_allocInformedStateSampler(swigCPtr, ProblemDefinition.getCPtr(probDefn), maxNumberCalls)), true);
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void _print(SWIGTYPE_p_std__ostream _out) {
-    ompl_basePINVOKE.OptimizationObjective__print(swigCPtr, SWIGTYPE_p_std__ostream.getCPtr(_out));
+    if (SwigDerivedClassHasMethod("_print", swigMethodTypes16)) ompl_basePINVOKE.OptimizationObjective__printSwigExplicitOptimizationObjective(swigCPtr, SWIGTYPE_p_std__ostream.getCPtr(_out)); else ompl_basePINVOKE.OptimizationObjective__print(swigCPtr, SWIGTYPE_p_std__ostream.getCPtr(_out));
     if (ompl_basePINVOKE.SWIGPendingException.Pending) throw ompl_basePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("isSatisfied", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateOptimizationObjective_0(SwigDirectorMethodisSatisfied);
+    if (SwigDerivedClassHasMethod("isCostBetterThan", swigMethodTypes1))
+      swigDelegate1 = new SwigDelegateOptimizationObjective_1(SwigDirectorMethodisCostBetterThan);
+    if (SwigDerivedClassHasMethod("isCostEquivalentTo", swigMethodTypes2))
+      swigDelegate2 = new SwigDelegateOptimizationObjective_2(SwigDirectorMethodisCostEquivalentTo);
+    if (SwigDerivedClassHasMethod("isFinite", swigMethodTypes3))
+      swigDelegate3 = new SwigDelegateOptimizationObjective_3(SwigDirectorMethodisFinite);
+    if (SwigDerivedClassHasMethod("betterCost", swigMethodTypes4))
+      swigDelegate4 = new SwigDelegateOptimizationObjective_4(SwigDirectorMethodbetterCost);
+    if (SwigDerivedClassHasMethod("stateCost", swigMethodTypes5))
+      swigDelegate5 = new SwigDelegateOptimizationObjective_5(SwigDirectorMethodstateCost);
+    if (SwigDerivedClassHasMethod("motionCost", swigMethodTypes6))
+      swigDelegate6 = new SwigDelegateOptimizationObjective_6(SwigDirectorMethodmotionCost);
+    if (SwigDerivedClassHasMethod("combineCosts", swigMethodTypes7))
+      swigDelegate7 = new SwigDelegateOptimizationObjective_7(SwigDirectorMethodcombineCosts);
+    if (SwigDerivedClassHasMethod("identityCost", swigMethodTypes8))
+      swigDelegate8 = new SwigDelegateOptimizationObjective_8(SwigDirectorMethodidentityCost);
+    if (SwigDerivedClassHasMethod("infiniteCost", swigMethodTypes9))
+      swigDelegate9 = new SwigDelegateOptimizationObjective_9(SwigDirectorMethodinfiniteCost);
+    if (SwigDerivedClassHasMethod("initialCost", swigMethodTypes10))
+      swigDelegate10 = new SwigDelegateOptimizationObjective_10(SwigDirectorMethodinitialCost);
+    if (SwigDerivedClassHasMethod("terminalCost", swigMethodTypes11))
+      swigDelegate11 = new SwigDelegateOptimizationObjective_11(SwigDirectorMethodterminalCost);
+    if (SwigDerivedClassHasMethod("isSymmetric", swigMethodTypes12))
+      swigDelegate12 = new SwigDelegateOptimizationObjective_12(SwigDirectorMethodisSymmetric);
+    if (SwigDerivedClassHasMethod("averageStateCost", swigMethodTypes13))
+      swigDelegate13 = new SwigDelegateOptimizationObjective_13(SwigDirectorMethodaverageStateCost);
+    if (SwigDerivedClassHasMethod("motionCostHeuristic", swigMethodTypes14))
+      swigDelegate14 = new SwigDelegateOptimizationObjective_14(SwigDirectorMethodmotionCostHeuristic);
+    if (SwigDerivedClassHasMethod("allocInformedStateSampler", swigMethodTypes15))
+      swigDelegate15 = new SwigDelegateOptimizationObjective_15(SwigDirectorMethodallocInformedStateSampler);
+    if (SwigDerivedClassHasMethod("_print", swigMethodTypes16))
+      swigDelegate16 = new SwigDelegateOptimizationObjective_16(SwigDirectorMethod_print);
+    ompl_basePINVOKE.OptimizationObjective_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo[] methodInfos = this.GetType().GetMethods(
+        global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance);
+    foreach (global::System.Reflection.MethodInfo methodInfo in methodInfos) {
+      if (methodInfo.DeclaringType == null)
+        continue;
+
+      if (methodInfo.Name != methodName)
+        continue;
+
+      var parameters = methodInfo.GetParameters();
+      if (parameters.Length != methodTypes.Length)
+        continue;
+
+      bool parametersMatch = true;
+      for (var i = 0; i < parameters.Length; i++) {
+        if (parameters[i].ParameterType != methodTypes[i]) {
+          parametersMatch = false;
+          break;
+        }
+      }
+
+      if (!parametersMatch)
+        continue;
+
+      if (methodInfo.IsVirtual && (methodInfo.DeclaringType.IsSubclassOf(typeof(OptimizationObjective))) &&
+        methodInfo.DeclaringType != methodInfo.GetBaseDefinition().DeclaringType) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  private bool SwigDirectorMethodisSatisfied(global::System.IntPtr c) {
+    return isSatisfied(new Cost(c, true));
+  }
+
+  private bool SwigDirectorMethodisCostBetterThan(global::System.IntPtr c1, global::System.IntPtr c2) {
+    return isCostBetterThan(new Cost(c1, true), new Cost(c2, true));
+  }
+
+  private bool SwigDirectorMethodisCostEquivalentTo(global::System.IntPtr c1, global::System.IntPtr c2) {
+    return isCostEquivalentTo(new Cost(c1, true), new Cost(c2, true));
+  }
+
+  private bool SwigDirectorMethodisFinite(global::System.IntPtr cost) {
+    return isFinite(new Cost(cost, true));
+  }
+
+  private global::System.IntPtr SwigDirectorMethodbetterCost(global::System.IntPtr c1, global::System.IntPtr c2) {
+    return Cost.getCPtr(betterCost(new Cost(c1, true), new Cost(c2, true))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodstateCost(global::System.IntPtr s) {
+    return Cost.getCPtr(stateCost((s == global::System.IntPtr.Zero) ? null : new State(s, false))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodmotionCost(global::System.IntPtr s1, global::System.IntPtr s2) {
+    return Cost.getCPtr(motionCost((s1 == global::System.IntPtr.Zero) ? null : new State(s1, false), (s2 == global::System.IntPtr.Zero) ? null : new State(s2, false))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodcombineCosts(global::System.IntPtr c1, global::System.IntPtr c2) {
+    return Cost.getCPtr(combineCosts(new Cost(c1, true), new Cost(c2, true))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodidentityCost() {
+    return Cost.getCPtr(identityCost()).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodinfiniteCost() {
+    return Cost.getCPtr(infiniteCost()).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodinitialCost(global::System.IntPtr s) {
+    return Cost.getCPtr(initialCost((s == global::System.IntPtr.Zero) ? null : new State(s, false))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodterminalCost(global::System.IntPtr s) {
+    return Cost.getCPtr(terminalCost((s == global::System.IntPtr.Zero) ? null : new State(s, false))).Handle;
+  }
+
+  private bool SwigDirectorMethodisSymmetric() {
+    return isSymmetric();
+  }
+
+  private global::System.IntPtr SwigDirectorMethodaverageStateCost(uint numStates) {
+    return Cost.getCPtr(averageStateCost(numStates)).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodmotionCostHeuristic(global::System.IntPtr s1, global::System.IntPtr s2) {
+    return Cost.getCPtr(motionCostHeuristic((s1 == global::System.IntPtr.Zero) ? null : new State(s1, false), (s2 == global::System.IntPtr.Zero) ? null : new State(s2, false))).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodallocInformedStateSampler(global::System.IntPtr probDefn, uint maxNumberCalls) {
+    return SWIGTYPE_p_std__shared_ptrT_ompl__base__InformedSampler_t.getCPtr(allocInformedStateSampler((probDefn == global::System.IntPtr.Zero) ? null : new ProblemDefinition(probDefn, true), maxNumberCalls)).Handle;
+  }
+
+  private void SwigDirectorMethod_print(global::System.IntPtr _out) {
+    _print(new SWIGTYPE_p_std__ostream(_out, false));
+  }
+
+  public delegate bool SwigDelegateOptimizationObjective_0(global::System.IntPtr c);
+  public delegate bool SwigDelegateOptimizationObjective_1(global::System.IntPtr c1, global::System.IntPtr c2);
+  public delegate bool SwigDelegateOptimizationObjective_2(global::System.IntPtr c1, global::System.IntPtr c2);
+  public delegate bool SwigDelegateOptimizationObjective_3(global::System.IntPtr cost);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_4(global::System.IntPtr c1, global::System.IntPtr c2);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_5(global::System.IntPtr s);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_6(global::System.IntPtr s1, global::System.IntPtr s2);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_7(global::System.IntPtr c1, global::System.IntPtr c2);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_8();
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_9();
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_10(global::System.IntPtr s);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_11(global::System.IntPtr s);
+  public delegate bool SwigDelegateOptimizationObjective_12();
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_13(uint numStates);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_14(global::System.IntPtr s1, global::System.IntPtr s2);
+  public delegate global::System.IntPtr SwigDelegateOptimizationObjective_15(global::System.IntPtr probDefn, uint maxNumberCalls);
+  public delegate void SwigDelegateOptimizationObjective_16(global::System.IntPtr _out);
+
+  private SwigDelegateOptimizationObjective_0 swigDelegate0;
+  private SwigDelegateOptimizationObjective_1 swigDelegate1;
+  private SwigDelegateOptimizationObjective_2 swigDelegate2;
+  private SwigDelegateOptimizationObjective_3 swigDelegate3;
+  private SwigDelegateOptimizationObjective_4 swigDelegate4;
+  private SwigDelegateOptimizationObjective_5 swigDelegate5;
+  private SwigDelegateOptimizationObjective_6 swigDelegate6;
+  private SwigDelegateOptimizationObjective_7 swigDelegate7;
+  private SwigDelegateOptimizationObjective_8 swigDelegate8;
+  private SwigDelegateOptimizationObjective_9 swigDelegate9;
+  private SwigDelegateOptimizationObjective_10 swigDelegate10;
+  private SwigDelegateOptimizationObjective_11 swigDelegate11;
+  private SwigDelegateOptimizationObjective_12 swigDelegate12;
+  private SwigDelegateOptimizationObjective_13 swigDelegate13;
+  private SwigDelegateOptimizationObjective_14 swigDelegate14;
+  private SwigDelegateOptimizationObjective_15 swigDelegate15;
+  private SwigDelegateOptimizationObjective_16 swigDelegate16;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(Cost), typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(Cost), typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] { typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] { typeof(Cost), typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(State) };
+  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(State), typeof(State) };
+  private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] { typeof(Cost), typeof(Cost) };
+  private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] { typeof(State) };
+  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] { typeof(State) };
+  private static global::System.Type[] swigMethodTypes12 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes13 = new global::System.Type[] { typeof(uint) };
+  private static global::System.Type[] swigMethodTypes14 = new global::System.Type[] { typeof(State), typeof(State) };
+  private static global::System.Type[] swigMethodTypes15 = new global::System.Type[] { typeof(ProblemDefinition), typeof(uint) };
+  private static global::System.Type[] swigMethodTypes16 = new global::System.Type[] { typeof(SWIGTYPE_p_std__ostream) };
 }
 
 }

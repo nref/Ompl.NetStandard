@@ -2479,6 +2479,9 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_SpaceInformation_isSetup___")]
   public static extern bool SpaceInformation_isSetup(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_OptimizationObjective___")]
+  public static extern global::System.IntPtr new_OptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_OptimizationObjective___")]
   public static extern void delete_OptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -2487,6 +2490,9 @@ class ompl_basePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isSatisfied___")]
   public static extern bool OptimizationObjective_isSatisfied(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isSatisfiedSwigExplicitOptimizationObjective___")]
+  public static extern bool OptimizationObjective_isSatisfiedSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_getCostThreshold___")]
   public static extern global::System.IntPtr OptimizationObjective_getCostThreshold(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -2497,14 +2503,26 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isCostBetterThan___")]
   public static extern bool OptimizationObjective_isCostBetterThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isCostBetterThanSwigExplicitOptimizationObjective___")]
+  public static extern bool OptimizationObjective_isCostBetterThanSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isCostEquivalentTo___")]
   public static extern bool OptimizationObjective_isCostEquivalentTo(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isCostEquivalentToSwigExplicitOptimizationObjective___")]
+  public static extern bool OptimizationObjective_isCostEquivalentToSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isFinite___")]
   public static extern bool OptimizationObjective_isFinite(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isFiniteSwigExplicitOptimizationObjective___")]
+  public static extern bool OptimizationObjective_isFiniteSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_betterCost___")]
   public static extern global::System.IntPtr OptimizationObjective_betterCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_betterCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_betterCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_stateCost___")]
   public static extern global::System.IntPtr OptimizationObjective_stateCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -2515,23 +2533,44 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_combineCosts___")]
   public static extern global::System.IntPtr OptimizationObjective_combineCosts(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_combineCostsSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_combineCostsSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_identityCost___")]
   public static extern global::System.IntPtr OptimizationObjective_identityCost(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_identityCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_identityCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_infiniteCost___")]
   public static extern global::System.IntPtr OptimizationObjective_infiniteCost(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_infiniteCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_infiniteCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_initialCost___")]
   public static extern global::System.IntPtr OptimizationObjective_initialCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_initialCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_initialCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_terminalCost___")]
   public static extern global::System.IntPtr OptimizationObjective_terminalCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_terminalCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_terminalCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isSymmetric___")]
   public static extern bool OptimizationObjective_isSymmetric(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_isSymmetricSwigExplicitOptimizationObjective___")]
+  public static extern bool OptimizationObjective_isSymmetricSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_averageStateCost___")]
   public static extern global::System.IntPtr OptimizationObjective_averageStateCost(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_averageStateCostSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_averageStateCostSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_setCostToGoHeuristic___")]
   public static extern void OptimizationObjective_setCostToGoHeuristic(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -2545,14 +2584,26 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_motionCostHeuristic___")]
   public static extern global::System.IntPtr OptimizationObjective_motionCostHeuristic(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_motionCostHeuristicSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_motionCostHeuristicSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_getSpaceInformation___")]
   public static extern global::System.IntPtr OptimizationObjective_getSpaceInformation(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_allocInformedStateSampler___")]
   public static extern global::System.IntPtr OptimizationObjective_allocInformedStateSampler(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_allocInformedStateSamplerSwigExplicitOptimizationObjective___")]
+  public static extern global::System.IntPtr OptimizationObjective_allocInformedStateSamplerSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, uint jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective__print___")]
   public static extern void OptimizationObjective__print(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective__printSwigExplicitOptimizationObjective___")]
+  public static extern void OptimizationObjective__printSwigExplicitOptimizationObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_OptimizationObjective_director_connect___")]
+  public static extern void OptimizationObjective_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, OptimizationObjective.SwigDelegateOptimizationObjective_0 delegate0, OptimizationObjective.SwigDelegateOptimizationObjective_1 delegate1, OptimizationObjective.SwigDelegateOptimizationObjective_2 delegate2, OptimizationObjective.SwigDelegateOptimizationObjective_3 delegate3, OptimizationObjective.SwigDelegateOptimizationObjective_4 delegate4, OptimizationObjective.SwigDelegateOptimizationObjective_5 delegate5, OptimizationObjective.SwigDelegateOptimizationObjective_6 delegate6, OptimizationObjective.SwigDelegateOptimizationObjective_7 delegate7, OptimizationObjective.SwigDelegateOptimizationObjective_8 delegate8, OptimizationObjective.SwigDelegateOptimizationObjective_9 delegate9, OptimizationObjective.SwigDelegateOptimizationObjective_10 delegate10, OptimizationObjective.SwigDelegateOptimizationObjective_11 delegate11, OptimizationObjective.SwigDelegateOptimizationObjective_12 delegate12, OptimizationObjective.SwigDelegateOptimizationObjective_13 delegate13, OptimizationObjective.SwigDelegateOptimizationObjective_14 delegate14, OptimizationObjective.SwigDelegateOptimizationObjective_15 delegate15, OptimizationObjective.SwigDelegateOptimizationObjective_16 delegate16);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_goalRegionCostToGo___")]
   public static extern global::System.IntPtr goalRegionCostToGo(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -2599,14 +2650,23 @@ class ompl_basePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_stateCost___")]
   public static extern global::System.IntPtr StateCostIntegralObjective_stateCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_stateCostSwigExplicitStateCostIntegralObjective___")]
+  public static extern global::System.IntPtr StateCostIntegralObjective_stateCostSwigExplicitStateCostIntegralObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_motionCost___")]
   public static extern global::System.IntPtr StateCostIntegralObjective_motionCost(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_motionCostSwigExplicitStateCostIntegralObjective___")]
+  public static extern global::System.IntPtr StateCostIntegralObjective_motionCostSwigExplicitStateCostIntegralObjective(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_isMotionCostInterpolationEnabled___")]
   public static extern bool StateCostIntegralObjective_isMotionCostInterpolationEnabled(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_delete_StateCostIntegralObjective___")]
   public static extern void delete_StateCostIntegralObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_StateCostIntegralObjective_director_connect___")]
+  public static extern void StateCostIntegralObjective_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_0 delegate0, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_1 delegate1, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_2 delegate2, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_3 delegate3, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_4 delegate4, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_5 delegate5, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_6 delegate6, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_7 delegate7, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_8 delegate8, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_9 delegate9, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_10 delegate10, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_11 delegate11, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_12 delegate12, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_13 delegate13, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_14 delegate14, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_15 delegate15, StateCostIntegralObjective.SwigDelegateStateCostIntegralObjective_16 delegate16);
 
   [global::System.Runtime.InteropServices.DllImport("ompl_wrap", EntryPoint="CSharp_OmplfBase_new_MaximizeMinClearanceObjective___")]
   public static extern global::System.IntPtr new_MaximizeMinClearanceObjective(global::System.Runtime.InteropServices.HandleRef jarg1);
